@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} Admin{% endblock %}
+{% block javascripts %}{{ parent() }}{% endblock %}
+{% block body %}
+    <div class="bg-dark pad-10 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h5>Administration</h5>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ path('admin') }}">Administration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('admin_newsletter') }}" class="nav-link text-white">Newsletter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('admin_message') }}" class="nav-link text-white">Générer des messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('admin_generated_visit') }}" class="nav-link text-white">Visites générées</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h5>Membres</h5>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="{{ path('admin_users_all') }}" class="nav-link text-white">Profils</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('admin_testimonies') }}" class="nav-link text-white" >Témoignages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('admin_groups') }}" class="nav-link text-white">Groupes</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h5>Contenu</h5>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="{{ path('admin_news') }}" class="nav-link text-white">Actualités</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('admin_diary') }}" class="nav-link text-white">Agenda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ path('admin_cgu') }}">CGU</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

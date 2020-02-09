@@ -1,0 +1,125 @@
+$red: #e30813;
+$white: rgb(245,245,245);
+
+.header-profile-img{
+  margin-top: 10px;
+  border-radius: 1em;
+  border: 1px solid #fff;
+}
+
+.header-default-img{
+  border-radius: 1em;
+  width: 12em;
+  margin-top: 10px;
+  background-color: rgba(255,255,255,0.4);
+  border: 1px solid #fff;
+}
+
+.child-age{
+  background-color: rgba(0,0,0, 0.3);
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.flowers{
+  width: 30px !important;
+}
+
+.header-absolute{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0.5em;
+  border: 1px solid white;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(255,0,0,0.4);
+}
+
+.head-camera{
+  border: 1px solid white;
+  background-color: rgb(211,211,211);
+  padding: 1em;
+  border-radius: 0.5em 0.5em;
+  img{
+    width: 50%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+.gallery{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,0,0, 0.3);
+  border-radius: 1em;
+  color: rgb(255,255,255);
+}
+
+.font-size-minor{
+  font-size: 0.7em;
+}
+
+.hover-child{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,0,0,0.4);
+}
+
+.height-20{
+  height: 20px;
+}
+
+.add-child{
+  background-color: rgba(211,211,211, 0.5);
+}
+
+.marg-top-75{
+  margin-top: 75px;
+}
+
+.sophie-bg-border{
+  background: url("../fixed/SophieFavre_Carre.png")top no-repeat;
+  height: 7em;
+  width: 7em;
+  border-radius: 50%;
+  background-size: cover;
+  border: 2px solid $red;
+}
+
+.triangle-edit{
+  display : inline-block;
+  height : 0;
+  width : 0;
+  margin: 0;
+  padding: 0;
+  border-top : 30px solid whitesmoke;
+  border-left : 30px solid #11ffee00;
+
+}
+
+.edit-bubble{
+  margin: 0;
+  padding: 0.5em;
+  font-size: 1.2em;
+  background-color: whitesmoke;
+  border-radius: 0 1em 1em 1em;
+}
+
+.over-profile{
+  top: 6em;
+  right: 0;
+  width: 20em;
+}

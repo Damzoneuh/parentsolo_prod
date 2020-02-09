@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} Shop{% endblock %}
+{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('shop') }}{% endblock %}
+{% block body %}
+
+    {% for message in app.flashes('success') %}
+        <div class="col-12">
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+
+    {% for message in app.flashes('error') %}
+        <div class="col-12">
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+
+    <div id="shop"></div>
+{% endblock %}

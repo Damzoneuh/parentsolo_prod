@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent()}} Flower{% endblock %}
+{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('flower') }}{% endblock %}
+{% block body %}
+    <div id="flower" data-isMan="{{ data.isMan }}" data-img="{{ data.profilImg }}"
+         data-complete="{{ data.complete }}" data-path="flower"
+            {% if app.user %} data-user="{{ app.user.id }}" {% endif %} ></div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'admin/base-admin.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block javascripts %}{{ parent() }}{% endblock %}
+
+
+{% block body %}{{ parent() }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="border-red rounded-more pad-30 marg-top-20 marg-bottom-20">
+                    <div class="text-center m-auto">
+                        <h2>Newsletter</h2>
+                    </div>
+                    {{ form_start(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

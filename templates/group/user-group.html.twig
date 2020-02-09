@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent()}} group{% endblock %}
+{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('group') }}{% endblock %}
+{% block body %}
+    <div id="group" data-isMan="{{ data.isMan }}" data-img="{{ data.profilImg }}"
+         data-complete="{{ data.complete }}" data-path="get/group/user"
+            {% if app.user %} data-user="{{ app.user.id }}" {% endif %} ></div>
+{% endblock %}

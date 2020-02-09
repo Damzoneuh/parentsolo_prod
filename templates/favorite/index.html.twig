@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Favorite{% endblock %}
+{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('favorite') }}{% endblock %}
+
+{% block body %}
+    <div id="favorite" data-isMan="{{ data.isMan }}" data-img="{{ data.profilImg }}"
+         data-complete="{{ data.complete }}"
+            {% if app.user %} data-user="{{ app.user.id }}" {% endif %} ></div>
+{% endblock %}

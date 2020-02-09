@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Admin faqs{% endblock %}
+
+{% block javascripts %}{{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="w-100 text-center text-grey"><h1>FAQ</h1></div>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success text-center">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-error text-center">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-md-6 col-12">
+                {{ form_start(form) }}
+                {{ form_end(form) }}
+            </div>
+            <div class="col-md-6 col-12">
+                {% if faqs is not empty %}
+                    {% for faq in faqs %}
+                        <div class="rounded-more border-grey shadow pad-30">
+                            <div class="d-flex align-items-center justify-content-around marg-bottom-20 shadow pad-10">
+                                <div>{{ faq.title }}</div>
+                                <a class="btn btn-group btn-outline-danger" href="{{ path('admin_delete_faq', {id: faq.id}) }}">Supprimer</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

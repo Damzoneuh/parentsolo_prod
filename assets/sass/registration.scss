@@ -1,0 +1,81 @@
+$red: #e30813;
+.banner-1{
+  background: url("../fixed/banner3.png") center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-2{
+  background: url("../fixed/iStock-1034831832.png") center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-3{
+  background: url("../fixed/banner2.png") top no-repeat fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-phone{
+  background: url("../fixed/HomePage-Mobile.png") top left no-repeat fixed;
+  background-size: 100vmax;
+  -webkit-background-size: 100vmax;
+  position: relative;
+}
+
+.row-banner{
+  padding-top: 2em;
+  margin-right: 0;
+}
+
+.bubble{
+  padding: 0.2em;
+}
+
+.sophie{
+  background: url("../fixed/SophieFavre_Carre.png") top no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 2px solid $red;
+  height: 7em;
+  width: 7em;
+}
+
+.threat-red {
+  color: $red;
+  font-weight: bold;
+}
+
+.baseline{
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.btn-danger{
+  background-color: $red;
+}
+
+.size-more{
+  font-size: 1.1em;
+}
+
+.day{
+  width: 45px;
+}
+
+.month{
+  width: 45px;
+}
+
+.year{
+  width: 66px;
+}
+
+.day, .month, .year{
+  margin-bottom: 5px;
+}
+
+.w-custom{
+  width: 60%;
+}

@@ -1,0 +1,79 @@
+{% extends 'email/base-email.html.twig' %}
+{% block style %}{{ parent() }}{% endblock %}
+
+ {% block header %}
+     {{ parent() }}
+    <div class="head text-center">
+        <h2 class="text-dark">{{ title }}</h2>
+    </div>
+ {% endblock %}
+{% block body %}{{ parent() }}
+    <div class="col-12">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="d-flex align-items-start justify-content-between marg-top-10">
+                    {% set image = 0 %}
+                    {% if user.img.count > 0 %}
+                        {% for img in user.img.values %}
+                            {% if img.isProfile is not null and img.isProfile is odd and img.isValidated is not null and img.isValidated is odd %}
+                                <img src="{{ absolute_url(path('api_render_img', {id: img.id})) }}" alt="profile" class="w-50"/>
+                                {% set image = img.id %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    {% if image == 0 and user.profil.isMan is odd %}
+                        <img src="{{ absolute_url(path('api_asset_img', {name:'HommeDefaut.png'})) }}" alt="profile" class="w-50"/>
+                    {% endif %}
+                    {% if image == 0 and user.profil.isMan is even %}
+                        <img src="{{ absolute_url(path('api_asset_img', {name:'FemmeDefaut.png'})) }}" alt="profile" class="w-50"/>
+                    {% endif %}
+                    <div>
+                        <h1>{{ user.pseudo|upper }}</h1>
+                        <h2>{{ user.profil.city.name }}</h2>
+                    </div>
+                </div>
+                <div class="marg-bottom-10 marg-top-10">
+                    <div class="">{{ content }}</div>
+                    <div class=""><a href="{{ absolute_url(path('dashboard')) }}" class="btn btn-group btn-danger marg-top-10">{{ button }}</a> </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="{{ absolute_url(path('api_asset_img', {name: 'NewMessage.svg'})) }}" alt="message"/>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+ {% block footer %}
+     {{ parent() }}
+     <div class="container">
+         <div class="row">
+             <div class="col-12">
+                 <div class="row bordered-email-nav">
+                    <div class="col-md-6 col-sm-12 font-size-2">
+                        <a href="{{ absolute_url(path('index')) }}" class="text-dark marg-right-10" >Parentsolo.ch</a>|
+                        <a href="{{ absolute_url(path('testimony')) }}" class="text-dark marg-right-10">{{ links.testimony }}</a>|
+                        <a href="{{ absolute_url(path('diary')) }}" class="text-dark">{{ links.diary }}</a>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-right">
+                        <a href="https://www.facebook.com/ParentsoloSingleltern" target="_blank" >
+                            <img src="{{ absolute_url(path('api_asset_img', {name: 'Facebook.png'})) }}" alt="facebook" class="sophie-img">
+                        </a>
+
+                        <a href="https://twitter.com/parentsolo" target="_blank" >
+                            <img src="{{ absolute_url(path('api_asset_img', {name: 'Twitter.png'})) }}" alt="twitter" class="sophie-img">
+                        </a>
+                    </div>
+                 </div>
+                 <div class="pad-30 text-black-50">
+                     {{ links.first }} <a class="text-danger" href="{{ absolute_url(path('parameters')) }}" >Parentsolo</a>
+                 </div>
+                 <div class="pad-30 text-black-50">
+                     {{ links.second }} <a class="text-danger" href="{{ absolute_url(path('faq')) }}" >FAQ</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+ {% endblock %}

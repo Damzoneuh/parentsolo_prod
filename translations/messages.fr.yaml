@@ -1,0 +1,631 @@
+home.link: Accueil
+testimony.link: Témoignages
+connection.link: Connexion
+logout.link: Déconnexion
+diary: Agenda
+contact: Contact
+cgu: CGU
+cgv: CGV
+press.link: Presse
+add: Publicité
+payment: 'Paiement Sécurisé'
+follow: 'Suivez nous sur'
+location: Lieu
+date: Date
+read.more: 'Lire la suite'
+share.event: 'Partagez un événement'
+intro: 'et des évolutions constantes pour vous apporter le bonheur en famille !'
+intro.red: 'c’est 10 ans de rencontres entre parents célibataires en Suisse'
+meeting.quality.title: 'LA QUALITE DE VOS RENCONTRES CERTIFIEE'
+meeting.quality: 'Tous les jours, Sophie Favre, notre modératrice basée à Genève, contacte par téléphone chaque nouvel(le) inscrit(e) pour s’assurer qu’il réside en Suisse et vous garantir des relations de qualité près de chez vous, pas à l’autre bout du monde...'
+ratio: '53% Maman / 47% Papa !'
+meeting.quality.red: 'UN CONCEPT UNIQUE EN EUROPE !'
+security.title: 'LA SECURISATION DE VOS DONNEES'
+security.text: 'Nous avons opté pour une sécurité maximale de vos données conforme au RGPD avec un hébergement et des serveurs en Suisse chez Infomaniak.ch et le système de paiement de paiement de PostFinance. Parentsolo.ch utilise les dernières technologies avec '
+security.green: 'les certificats TLS DV !'
+security.red: 'VOTRE SECURITE NOTRE PRIORITE !'
+interactive.title: 'L''INTERACTIVITE PARTOUT TOUT LE TEMPS'
+interactive.text: 'Le site est optimisé pour être accessible sur tous vos supports de votre ordinateur à votre smartphone, sans oublier la tablette.'
+interactive.green: 'La messagerie directe plus intuitive simplifie vos échanges en temps réel.'
+interactive.red: 'Le matching, des suggestions pour vous !'
+diary.home: 'Parentsolo.ch propose à ses partenaires et aux membres du site de partager des événements à vivre entre parents célibataires et avec les enfants pour vivre de beaux moments en famille. C''est l''occasion également de se rencontrer entre membres et partager des activités conviviales. Partagez un événement'
+talking.threat.first: 'Bonjour! Je suis Sophie Favre du site Parentsolo.ch, le site réservé aux parents célibataires résidant en Suisse.'
+talking.threat.first.red: 'Quel type de rencontres recherchez-vous ?'
+lovely: Amoureuse
+friendly: Amicales
+both: 'Les deux'
+baseline: Inscrivez-vous
+baseline.red: gratuitement
+talking.threat.second: 'Faisons un peu plus connaissance, j’ai juste 4 questions à vous poser, cela sera rapide!'
+talking.threat.second.red: 'Tout d’abord, vous êtes ?'
+daddy: 'Un papa'
+mom: 'Une maman'
+talking.threat.third: 'Je n’ose pas vous demander votre âge mais, je dois m’assurer que vous êtes bien majeur.'
+talking.threat.third.red: 'Quel est votre date de naissance ? JJ/MM/AAAA'
+validate: Validez
+talking.threat.third.error: 'Désolé, Vous n''êtes pas majeur .'
+talking.threat.fourth: 'Comme vous le savez, Parentsolo.ch garantie des rencontres en Suisse, près de chez vous.'
+talking.threat.fourth.red: 'Dans quelle ville habitez-vous ?'
+talking.threat.fourth.response: 'J''adore cette ville !'
+talking.threat.fourth.label.canton: 'Votre canton'
+talking.threat.fourth.label.city: 'Votre ville'
+talking.threat.fifth: 'Parentsolo.ch est un concept unique en Europe, j’appelle chaque jour tous les nouveaux inscrits!'
+talking.threat.fifth.red: 'Quel est votre numéro de téléphone ?'
+talking.threat.sixth: 'J’ai fini mes indiscrétions, créons maintenant ensemble, votre connexion !'
+talking.threat.sixth.red: 'Entrez votre email'
+talking.threat.seventh: 'Définissez votre mot de passe personnel.'
+talking.threat.seventh.red: 'Votre mot de passe'
+talking.threat.seventh.confirm: 'Confirmez votre mot de passe'
+talking.threat.seventh.error: 'Votre mot de passe doit contenir 6 caractères au minimum, dont : 1 majuscule, 1 chiffre et 1 caractère spécial (@ , _ , - , & , ! , ? , * , #, etc. ) '
+talking.threat.final: 'Félicitations! Je viens de vous envoyez un Email portant le lien de confirmation, sur lequel vous devez cliquer pour accéder à votre espace privé. (pensez à vérifier dans les spams)'
+press: 'La presse en parle'
+let.testimony: 'Laisser un témoignage'
+go.shop: 'Accès boutique'
+search: Recherche
+age.between: 'Age entre'
+and: et
+years.old: ans
+canton: Canton
+child: Enfants
+auto.search: 'Notre cupidon recherche pour vous les profils, les + compatibles avec vos centres d’intérêt et qui répondent à vos attentes!'
+launch: Lancer
+last.profile.title: 'Les derniers papas et mamans inscrits'
+groups: Groupes
+groups.describe: 'Les groupes sont des espaces de partage entre les membres Parentsolo.ch autour de centres d''intérêt qui vous rassemblent !'
+groups.show.link: 'Voir la liste des groupes'
+groups.create.link: 'Créer un groupe'
+created.by: 'Créé par'
+groups.last.link: 'Lien vers le dernier groupe'
+forget.password: 'Mot de passe oublié ?'
+news: Actualités
+indifferent: Indifférent
+new.search: 'Nouvelle recherche'
+view: Voir
+accept.favorite: 'En validant, ce profil sera supprimé de vos favoris. Cette action engendre la perte d''un favori.'
+accept: Accepter
+cancel: Annuler
+function: Fonctionnalités
+profil.create: 'Création du profil'
+profil.consult: 'Consultation de profils'
+profil.search: 'Recherche de profils'
+message.receive: 'Recevoir des messages'
+flower.receive: 'Recevoir des roses'
+message.send: 'Envoyer des messages'
+group.join: 'Rejoindre un groupe'
+group.create: 'Création de groupe'
+flower.send: 'Envoyer des roses'
+favorite.list: 'Liste de profils favoris'
+profils: profils
+subscribe: Abonnement
+registered: Inscrit
+basic: Basic
+premium: Premium
+medium: Medium
+unlimited: Illimité
+options: Options
+month: mois
+flower.receive.message: 'Vous avez reçu une rose'
+new.notification: 'Vous avez reçu une nouvelle notification'
+visit.receive: 'à visiter votre profil'
+flower.success: 'Votre rose a bien été envoyée'
+new.message: 'Vous avez reçu un message'
+not.sub: 'Cette fonctionnalité n''est pas comprise dans votre abonnement'
+personality: Personnalité
+relationship.search: 'Je cherche une relation'
+temperament: Tempérament
+childs.wanted: 'Nombre d’enfants souhaités'
+spoken.languages: 'Langues parlées'
+nationality: Nationalité
+lifestyle: 'Style de vie'
+family.status: 'Statut marital'
+way.of.life: 'Mode de vie'
+childs.care: 'Garde des enfants'
+religion: Religion
+smoke: Fumeur
+studies.level: 'Niveau d’études'
+line.of.buisness: 'Secteur d’activité'
+appearence: Apparence
+eyes: Yeux
+hair: Cheveux
+hair.style: Coiffure
+silhouette: Silhouette
+size: Taille
+origin: Origine
+group.participation: 'Je participe aux groupes sur parentsolo.ch'
+point.of.interest: 'Centre d’intêrets'
+outing: Sorties
+cooking: Cuisine
+hobbies: Loisirs
+sports: Sports
+music: musique
+movie: Film
+reading: Lecture
+pets: Animaux
+discover: Découvrir
+discover.text: 'Découvrez et partagez avec nos membres des évènements en Suisse à vivre en famille.'
+view.more: 'Voir plus'
+add.img: 'Ajouter des photos'
+Other: Autre
+Organic: Biologique
+Chinese: Chinoise
+Dietary: Diététique
+Fast-food: Fast-food
+French: Française
+Italian: Italienne
+Mexican: Mexicaine
+Oriental: Orientale
+Vegan: Vegan
+Vegetarian: Végétarienne
+Animals: Animals
+Cars: Automobile
+Hiking: Balades
+Do-it-yourself: Bricolage
+Cooking: Cuisine
+texte.desc: 'Votre annonce est la première idée que l’on se fera de vous. Votre annonce doit donner envie aux autres membres de Parentsolo.ch de vous contacter. Alors présentez-vous sous vos meilleurs aspects!'
+Dancing: Danse
+Drawing: Dessin
+Writing: Ecriture
+text.validation.desc: 'Votre annonce sera visible par les membres après avoir été validée par nos modérateurs. Seront refusées, les annonces comportant des: termes incorrects, coordonnées personnelles (e-mail, n° de téléphone, adresse, nom, etc.), messages publicitaires, propositions (coquines, sexy, etc.), ou ne correspondant pas à nos CGU.'
+Computer: Informatique
+Internet: Internet
+Gardening: Jardinage
+'Video Games': 'Video Games'
+Reading: Lecture
+'Creative leisure': 'Loisirs créatifs'
+Music: Musique
+Painting: Peinture
+Photography: Photographie
+Shopping: Shopping
+Sport: Sport
+TV: Télévision
+Theatre: Théâtre
+'Aqua gym': Aquagym
+'Martial arts': 'Arts martiaux'
+Athletics: Athlétisme
+Badminton: Badminton
+Baseball: Baseball
+Boxing: Boxe
+Running: 'Course à pied'
+'Body building': 'Body building'
+Cycling: Cyclisme
+Dance: Danse
+Fitness: Fitness
+Golf: Golf
+Gymnastics: Gymnastique
+Handball: Handball
+Hockey: Hockey
+Swimming: Natation
+Rugby: Rugby
+'Air sports': 'Sports aériens'
+'Sliding sports': 'Sports de glisse'
+'Motor sports': 'Sports mécaniques'
+Squash: Squash
+Tennis: Tennis
+Sailing: Voile
+Soccer: Football
+'Winter sports': 'Sports d''hiver'
+Volleyball: Volleyball
+'Mountain bike': VTT
+Basketball: Basketball
+'Bar, Pub': 'Bar, Pub'
+Night-Club: Discothèque
+Exhibition: Exposition
+Family: Famille
+Festival: Festival
+Museum: Musée
+Opera: Opéra
+'Hiking, Nature': 'Randonnée, Nature'
+Restaurant: Restaurant
+'Friendly evening': 'Soirée entre amis'
+Blues: Blues
+Classic: Classique
+Country: Country
+Funk: Funk
+'Hard Rock': 'Hard Rock'
+'Hip Hop': Hip-Hop
+Independent: Indépendant
+Jazz: Jazz
+'Contemporary music': 'Musique Contemporaine'
+'World music': 'Musique du Monde'
+Electro: 'Musique Electronique'
+'Traditional Music': 'Musiques Traditionnelles'
+Pop–Rock: Pop–Rock
+R’n’B: R’n’B
+Rap: Rap
+Reggae: Reggae
+Soul: Soul
+Techno: Techno
+'French variety': 'Variété Française'
+'Variété Internationale': 'Variété Internationale'
+'International variety': 'Variété Internationale'
+Art: Art
+Authors: Auteurs
+at: Chat
+Cat: Chat
+Attentive: Attentionné
+Albanian: Albanais
+Divorced: Divorcé
+Agnostic: Agnostique
+'No, I don''t support smoke.': 'Non, je ne supporte pas la fumée.'
+Apprenticeship: Apprentissage
+'Aeronautic and Space': 'Aéronautique et Espace'
+Blue: Bleus
+White: Blancs
+Bald: Chauve
+Slim: Mince
+African: Africaine
+'No, but I support smoke.': 'Non, mais la fumée ne me gène pas.'
+'Yes, occasionally.': 'Oui, occasionnellement.'
+'Yes, regularly.': 'Oui, régulièrement.'
+Bachelor: Bachelor
+'Federal certificate': 'Brevet fédéral'
+'secondary school': Collège
+'Secondary school': Collège
+'High School': 'Cycle d’orientation'
+UAS: 'Haute école spécialisée'
+Adventure: Aventure
+Comedy: Comédie
+Musical: 'Comédie musicale'
+'Romantic comedy': 'Comédie sentimentale'
+'Short movies': 'Courts métrages'
+'Cartoon, animated': 'Dessins animés, animation'
+Documentary: Documentaire
+Drama: Drame
+Erotic: Erotique
+Fantasy: Fantastique
+War: Guerre
+Historical: Historique
+'your request has been sent': 'Votre demande à été envoyée'
+Horror: Horreur
+Police: Policier
+'Science fiction': 'Science fiction'
+Thriller: Thriller
+Western: Western
+'I keep it to myself.': 'Je le garde pour moi.'
+'With my kids.': 'Avec mes enfants'
+'With my kids': 'Avec mes enfants'
+'With my parents': 'Chez mes parents'
+'Alone with my pet': 'Seul(e) avec mon animal de compagnie'
+'Totally alone': 'Tout(e) seul(e)'
+add.child: 'Ajouter un enfant'
+Comics: 'Bandes dessinées'
+'Wellness, health, phyto': 'Bien-être, Santé, Phyto'
+Biography: Biographie
+Sociology: 'Faits de société'
+'Horror, Thriller': 'Horreur, Epouvante'
+Magazines: Magazine
+Manga: Manga
+'Nature, animal': 'Nature, Animaux'
+'Regional narrations': 'Récits régionaux'
+'Contemporaneous novels': 'Romans contemporains'
+Action: Action
+Humor: 'Romans d''humour'
+Essays: Essais
+Dog: Chien
+Insect: Insecte
+Bird: Oiseau
+Fish: Poisson
+Reptile: Reptile
+'favorite added': 'Favoris ajouté'
+'favorite removed': 'Favoris supprimé'
+Adventuresome: Aventureux
+Quiet: Calme
+Conciliatory: Conciliant
+Demanding: Exigeant
+Expansive: Expansif
+Proud: Stolz
+Generous: Généreux
+Carefree: Insouciant
+introvert: Introverti
+Introvert: Introverti
+Jealous: Jaloux
+Pensive: Pensif
+Possessive: Possessif
+Sociable: Sociable
+'Lone Wolf': Solitaire
+Spontanious: Spontané
+Superstitiously: Superstitieux
+Tenacious: Tenace
+Shy: Timide
+Vivid: Vif
+German: Allemand
+English: Anglais
+Arabic: Arabe
+Armenian: Arménien
+Ayamara: Ayamara
+Bengali: Bengali
+Catalan: Catalan
+Korean: Coréen
+Croatian: Croate
+Spanish: Espagnol
+Finnish: Finnois
+Greek: Grec
+Hungarian: Hongrois
+Japanese: Japonais
+Kiswahili: Kiswahili
+Malayan: Malia
+Mandarin: Mandarin
+Mongolian: Mongol
+Dutch: Néerlandais
+Urdu: Ourdou
+Persian: Persan
+Portuguese: Portugais
+Quechua: Quechua
+Russian: Russe
+SeSotho: 'Se Sotho'
+Sesotho: 'Se Sotho'
+Serbian: Serbe
+Slovakian: Slovaque
+Slovenian: Slovène
+Swedish: Suédois
+Atheist: Athée
+'Buddhist non- practising': 'Bouddhiste non pratiquant'
+'Buddhist, practising': 'Bouddhiste pratiquant'
+'non- practising': 'Catholique non pratiquant'
+'Catholic non- practising': 'Catholique non pratiquant'
+'Catholic practising': 'Catholique pratiquant'
+'Jew non- practising': 'Israélite non pratiquant'
+'Jew practising': 'Israélite pratiquant'
+'Muslim non- practising': 'Musulman non pratiquant'
+'Muslim practising': 'Musulman pratiquant'
+Orthodox: Orthodoxe
+'Protestant non- practising': 'Protestant non pratiquant'
+'Protestant practising': 'Protestant pratiquant'
+Brown: Marrons
+Black: Noirs
+Hazelnut: Noisettes
+Green: Verts
+Agriculture: Agriculture
+'Agri-food industry': Agroalimentaire
+Army: Armée
+Handicraft: Artisanat
+Artistically: Artistique
+'Audiovisual sector': Audiovisuel
+Automobile: Automobile
+'Audit, Accounting, Administration': 'Audit, Comptabilité, Gestion'
+'Bank, Insurance': 'Banque, Assurance'
+'Biology, Biochemistry': 'Biologie, Biochemie'
+'Building, Public Works': 'Bâtiment, Travaux Publics'
+'Trading, Distribution': 'Commerce, Distribution'
+Communication: Communication
+'Creative work': Création
+Culture: Culture
+'Documentation, Library': 'Documentation, Bibliothèque'
+Law: Droit
+'Publishing industry, Book': 'Edition, Livre'
+Teaching: Enseignement
+Environment: Environnement
+'Public Service': 'Fonction Publique'
+'Hotel, Gastronomy': 'Hôtellerie, Restauration'
+Humanitarian: Humanitaire
+'edit profile': 'Editer mon profil'
+'file name': 'Nom du fichier'
+image: Image
+'birth date': 'Date de naissance'
+year: Année
+'Real estate': Immobilier
+Industry: Industrie
+day: Jour
+'Computing, Telecom, Web': 'Informatique, Télécommunication, Web'
+firstname: Prénom
+Journalism: Journalisme
+Languages: Langues
+Marketing: Marketing
+Medical: Médical
+'Fashion, Textile': 'Mode, Textile'
+Paramedical: Paramédical
+Psychology: Psychologie
+Advertising: Publicité
+'Human Resources': 'Ressources Humaines'
+boy: Garçon
+girl: Fille
+'Human sciences': 'Sciences Humaine'
+Secretary: Secrétariat
+Social: Social
+'Entertainment, Show': Spectacle
+Tourism: Tourisme
+'Transportation, Logistics': 'Transport, Logistique'
+Retired: Retraité
+Unemployed: 'Sans emploi'
+Blond: Blonds
+'Light  chestnut': 'Châtains clairs'
+'Dark chestnut': 'Châtains foncés'
+Gray: Gris
+Redhead: Roux
+Short: Court
+Long: Long
+Mid-length: Mi-long
+Shaved: Rasé
+'Very short': 'Très court'
+'Very long': 'Très long'
+Muscular: Musclée
+Normal: Normale
+'More than pulpy': 'Plus que pulpeuse'
+Meagerly: 'Plutôt maigre'
+Corpulent: Corpulent
+Arabian: Arabe
+Asiatic: Asiatique
+European: Européenne
+Hispanic: Hispanique
+Métis: Métisse
+adding: Ajouter
+sophie.edit.profil: 'Ne laissez pas passer de belles rencontres, ajoutez dès maintenant de belles photos et une description sympa à votre profil !'
+'We have the share custody.': 'Nous sommes en garde alternée.'
+'I have the sole custody.': 'J’ai la garde exclusive.'
+'My ex-partner has the sole custody.': 'Mon ex-conjoint(e) à la garde exclusive.'
+Swiss: Suisse
+Austrian: Autrichienne
+Married: Marié
+'Civil partner': Pacsé
+Separated: Séparé
+Widowed: 'Veuf / veuve'
+'Less than 150 cm': 'Moins de 150 cm'
+'Between 150 and 160 cm': 'Entre 150 et 160 cm'
+'Between 160 and 170 cm': 'Entre 160 et 170 cm'
+'Between 170 and 180 cm': 'Entre 170 et 180 cm'
+'Between 180 and 190 cm': 'Entre 180 et 190 cm'
+'Between 190 and 200 cm': 'Entre 190 et 200 cm'
+'More than 200 cm': 'Plus de 200 cm'
+gender: Genre
+communication.lang: 'Langue de communication avec les modérateurs de Parentsolo.ch'
+man: Homme
+woman: Femme
+is.looking.for: 'Je recherche'
+address: Adresse
+name: Nom
+npa: NPA
+text.email.notif: 'Les notifications par email concernent la consultation de votre profil, la réception d''un nouveau message ou d''une nouvelle fleur.'
+notification.checkbox: 'Cochez cette case pour recevoir les notifications par email.'
+'connection settings': 'Paramètres de connexion'
+'account settings': 'Paramètres du compte'
+'change password': 'Changer mon mot de passe'
+parameter.paragraph1: 'Parentsolo.ch vous demande vos nom, prénom, adresse et numéro de téléphone dans l’unique but d’offrir un service de qualité à tous les membres du site.'
+parameter.paragraph2: 'Notre site se démarque des sites de rencontres généralistes qui comportent de nombreuses fausses annonces, faux profils, etc.,'
+parameter.paragraph.red: 'en appelant à l’inscription tous ses membres avant de valider manuellement leurs profils.'
+parameter.paragraph3: 'En conformité avec le RGPD et par conviction, en aucun cas, le site Parentsolo.ch ne publiera, distribuera ou vendra vos informations personnelles (nom, prénom, adresse et numéro téléphone).'
+'account notification': 'Notifications par E-mail'
+alias: Pseudo
+faq: FAQ
+'stop subscribe': 'Arrêter mon abonnement'
+press_contact: Presse-
+abuse_signal: 'Signaler un abus'
+diary.search: 'Rechercher un évènement'
+diary.add: 'Proposer un évènement'
+sub.and.option: 'Abonnements & Options'
+my.groups: 'Mes groupes'
+dashboard.link: 'Tableau de bord'
+technical.issue: 'Problème technique'
+'SUBSCRIPTION & OPTIONS: What payment methods do you support?': 'ABONNEMENT & OPTIONS: Quels sont les moyens de paiement acceptés?'
+"The therms of payment for the Parentsolo.ch service stand nowadays as follows.\r\n\tWith credit card or paypal: immediate availability\r\n\tWith bank transfer :  3 until 5 days waiting time\r\n\tWith post payment : 3 until 15 days waiting time\r\n \r\nIn order to subscribe to our service, please follow the link below after being connected:\r\nhttp://www.parentsolo.ch/shop\r\n\r\nBy using post receipts, empty post receipts have to be fulfilled with the necessary bank data available on the section \"bank transfer\" of this page.": "A ce jour, nous disposons des méthodes de paiement suivantes:\r\n\tpar carte bancaire ou paypal, disponibilité immédiate\r\n\tpar virement bancaire, de 3 à 5 jours ouvrables\r\n\tpar bulletin de versement, de 3 à 15 jours ouvrables\r\n\r\npour vous abonner rendez-vous sur le lien suivant en étant connecté: https://www.parentsolo.ch/shop\r\n\r\nNous ne disposons pas de bulletins de versement pré-remplis. Vous pouvez utiliser ceux disponibles à La poste et les remplir avec les coordonnées donner pour le moyen de paiement \"virement bancaire\"."
+'SUBSCRIPTION & OPTIONS: I have paid by post payment, whey my services will be activated ?': 'ABONNEMENT & OPTIONS: J’ai réglé par Bulletin de Versement, quand mes services seront-t-ils activés ?'
+"The Parentsolo.ch team inform you that post payment are available after a maximal delay of 15 days. In order to get an immediate credit of your subscription, you can send us the following data:\r\n\tFirst name and second name\r\n\tPseudonym\r\n\tPhone number\r\n\tPayment date\r\n\tPostal payment receipt\r\n\tPayed Amount\r\n\r\nThese data can be sent to our service by e-mail:\r\ninfo@parentsolo.ch": "L'équipe de parentsolo.ch vous informe que les paiements par bulletin de versement interviennent après un délai maximal de 15 jours ouvrables. Si vous le souhaitez, vous pouvez nous envoyer les données suivantes pour activer vos services plus tôt:\r\n\tVotre nom et prénom\r\n\tVotre pseudo\r\n\tVotre n° de téléphone\r\n\tDate de paiement\r\n\tRécépissé postal\r\n\tLe montant réglé\r\n\r\nVous pouvez nous faire parvenir ces documents par e-mail :\r\ninfo@parentsolo.ch"
+'ABUSE: How to report an abuse or a disrespectful behavior?': 'ABUS: Comment faire pour signaler un abus ou un comportement irrespectueux ?'
+"For each abuse from a Parentsolo.ch user, please contact us by clicking on the warning icon on his profile or directly by email info@parentsolo.ch. We will analyze the situation and take whatever measures are necessary. \r\n\r\nIf you want, you could block your profil from this user since his profile by clicking on the barred eye icon.\r\n\r\nEveryday we make profile verification to avoid abuses and fake profil. For quality guarantee services, inadequate deemed profiles could disappear at anytime. To confirm your data, please identify yourself in each email with your username, email address, full name and phone number.": "Pour tout abus de la part d’un membre parentsolo.ch, nous vous remercions de contacter notre équipe en cliquant sur l'icône \"attention\" sur son profil ou directement par Email à info@parentsolo.ch, afin que nous puissions constater cet abus et prendre les mesures adéquates si nécessaire.\r\n\r\nSi vous le souhaitez, vous pouvez bloquer l’accès de ce membre à votre profil. Une fois sur votre profil, dans le panneau situé à droite, au-dessous du bouton pour le chat, cliquez sur l’étoile noire pour ajouter ce membre à la liste noire. Ainsi, celui-ci n’aura plus accès à votre profil.\r\n\r\nChaque jour, nous effectuons une vérification des profils afin d’éviter les abus et les faux profils. Pour garantir la qualité de notre service, les profils jugés inadéquats peuvent disparaître à tout moment. Afin que nous puissions traiter votre demande plus rapidement, merci de vous identifier à chaque e-mail avec votre pseudo, adresse e-mail, nom, prénom et numéro de téléphone."
+'CONCEPT: Why is the website reserved to single parent and who lived in Switzerland?': 'CONCEPT: Pourquoi le site est-il réservé aux parents célibataires et résidents suisses ?'
+"Parentsolo.ch offer to single moms and single dads the possibility of meeting. Parentsolo.ch is made to optimise time taken to find a new friendship or a new love one.\r\n\r\nIn order to maintain a nationwide level of quality, our service is currently limited to single parents living in Switzerland. For safety purpose, our moderators deactivate profile not corresponding.": "Parentsolo.ch offre la possibilité aux mamans et papas célibataires de se rencontrer. Parentsolo.ch est conçu pour optimiser le temps consacré à la recherche d’une nouvelle amitié ou même d’un nouvel amour.  \r\n\r\nNos services sont réservés uniquement aux parents célibataires résidants en Suisse, car nous cherchons à offrir un service de qualité nationale. Par mesure de sécurité, nos modérateurs désactivent les profils non correspondant."
+'CONNECTION: I have forgotten my password!': 'CONNEXION: J''ai oublié mon mot de passe !'
+"In order to get a new password, click in the connection tool at the top-right of the welcome page and then on the button “Password forgotten?” and follow the instructions. \r\n\r\nType your email address and verify your mailbox. You will receive a link, follow it und type your new password before to confirm it. Then you can connect again yourself and access to your profile.": "Pour changer votre mot de passe, dans la page d’accueil parentsolo.ch, vous avez dans l'outil de connexion en haut à droite une mention « Mot de passe oublié ? ». Cliquez sur ce lien et suivez les instructions.\r\n\r\nN’oubliez pas de saisir votre adresse e-mail correctement. Un e-mail vous sera envoyé avec un lien pour le changement de mot de passe. Cliquez sur ce lien. Veuillez saisir votre nouveau mot de passe deux fois. Vous pouvez à nouveau accéder à votre profil."
+'CHILDREN: How to place the number of children on my profile?': 'ENFANTS: Comment ajouter le nombre d''enfant à mon profil?'
+'On the page Edit Profile in access by the connected menu, click on "Added" in the children avatar placed next to description on the left of the band. Enter the date of birth from your child, you can also add his name and photo if you want (optional). By validating, it will be automatically updated the number of your child on the Edit Profil page and in your profile. Repeat it for each child.': 'Sur la page Edition du Profil accessible depuis le menu connecté, cliquez sur "Ajouter" dans l''avatar situé à gauche du bandeau à côté de la description. Entrez la date de naissance de l''enfant, vous pouvez aussi ajouter son prénom et sa photo (facultatif). En validant, vous mettrez à jour automatiquement le nombre d''enfant dans le bandeau de la page Edition du profil et sur votre Profil. Répétez l''action pour chacun de vos enfants.'
+'GROUP: What is going groups on Parentsolo.ch?': 'GROUPE: A quoi servent les groupes sur Parentsolo.ch ?'
+"Upon entry to Parentsolo.ch, all members are on the default group parentsolo.ch. This group intends to introduce to you the functionality \"custom groups\". You could leave it later.\r\n\r\nThe Groups aims to bring together members with the same personal aspirations, preferences, wishes, etc. Those groups allow members to contact them according to their common affinities. Our goal is to allow serious dating. That's for why we prefer avoid a forum which may cause embarrassing situation.": "Dès l’inscription sur Parentsolo.ch, tous les membres rejoignent le groupe parentsolo.ch par défaut. Ce groupe de parentsolo.ch a pour vocation de vous familiarisé avec la fonctionnalité \"groupes personnalisés\". Vous pourrez quitter celui-ci dès que le fonctionnement des groupes n'aura plus aucun secret pour vous ! \r\n\r\nLe fonctionnement des groupes vise à réunir les membres ayant les mêmes goûts, aspirations, envies, etc… Ces groupes permettent donc à nos membres de se contacter en fonction de leurs affinités communes. Notre objectif est de permettre des rencontres sérieuses. C’est la raison pour laquelle nous préférons éviter un forum qui pourrait occasionner des situations gênantes."
+'REGISTRATION: I''m registered but I can''t use some fonctions. Why?': 'INSCRIPTION: Je suis inscris et ne peux pas utiliser certaines fonctionnalités, pourquoi ?'
+"Once you register, you can log on your account thanks to your email and password. Arrived on your dashboard you can click on the last moms and dads registered. You can make too a search with the box on dashboard or by using the link \"Search\" in the menu. You can also read your direct mail and roses.\r\n\r\nTo interact with other members, that is using direct messenger, sending roses, creating group, accessing at matching or having a favorites list, you had to subscribe or for some formula taken few option.": "En tant que simple inscrit, vous pouvez vous connecter à votre compte avec votre Email et mot de passe. Une fois sur votre page d’accueil, vous pouvez cliquer sur les derniers mamans et papas inscrits. Vous pouvez également faire une recherche, ceci en utilisant la recherche rapide sur le tableau de bord, ou en utilisant le lien « Recherche » dans le menu. Vous pouvez par ailleurs lire vos messages et vos roses.\r\n\r\nPour interagir avec les autres membres, c’est-à-dire utiliser la messagerie directe, envoyer des roses, créer un groupe, accéder au matching ou avoir une liste de favoris, il faut que vous soyez abonné et pour certaines formules prendre des options."
+'BLOCKED: Why am I blocked by another member?': 'BLOQUE: Pourquoi suis-je bloqué par un autre membre ?'
+"We can't control who from our members blocked others.\r\nThat why we can't know the reasons for its he/she wouldn't already communicate with you .": "Nous ne pouvons pas contrôler qui de nos membres en bloquent d’autres. \r\nC’est pourquoi nous ne pouvons pas connaître les raisons personnelles pour lesquelles il/elle ne désire plus communiquer avec vous."
+'PHOTO: My picture don''t be uploaded or don''t be accepted': 'PHOTO: Ma photo ne se charge pas ou n''a pas été validée'
+"The photo format we accept are exclusively .JPEG, .PNG or .GIF.\r\n\r\nEach photo must be validated from our service before being published on your profile\r\n\r\nYour profil photo must your face showing and representing clearly.  To allow members to appreciate yourself, please choose portrait. Are refused:\r\n           Pictures which do not represent you ,\r\n           Pornographic or sexy pictures ;\r\n           Poor quality photo: too blurry, too dark, too pixelated, etc.\r\n           Photo with sun glasses or taken too far, etc.,\r\n           Drawings and illustrations.": "Les formats de photos pris en compte sont .JPG, .PNG ou .GIF.\r\n\r\nChaque photo fait l'objet d'une validation par nos services avant sa publication sur votre profil.\r\n\r\nLes photos de profil doivent montrer votre visage clairement de façon à ce que les autres membres puissent vous apprécier, privilégiez les portraits. Sont refusées :\r\n           les photos qui, à l'évidence, ne vous représentent pas,\r\n           les photos à caractère pornographique, sexy ou à caractère publicitaire,\r\n           les photos de mauvaise qualité: floues, sombres, pixélisées, etc.,\r\n           les photos avec des lunettes de soleil, prises de trop loin, etc.,\r\n           les dessins, illustrations et photomontages."
+img: Image
+description: Description
+'PHOTO: I can''t send my photo to another member': 'PHOTO: Je n''arrive pas à envoyer de photo à un membre'
+"We remember to you that sending file to another member is not possible. This option isn't available to avoid uncertainty file to damage your computer.\r\n\r\nThe best way to share your photo is your profile photo, your gallery or your child photo which one allow you to complete your profile.": "Nous vous rappelons que l’envoi de fichiers à un autre membre n’est pas prévu. Cette option n’a pas été mise à disposition afin d’éviter l’envoi de fichiers dangereux risquant d’endommager votre ordinateur.\r\n\r\nLa meilleure façon de partager vos photos reste votre photo de profil, votre galerie et les photos de vos enfants qui vous permettront également de compléter votre profil."
+next: Suivant
+previous: Précédent
+'TECHNICAL PROBLEM: My photo or description will not be displayed': 'PROBLEME TECHNIQUE: Ma photo ou ma description ne s''affiche pas'
+"Please note that text and photo are submitted to our service for approval within 3 working days.\r\n\r\nIf there are approval by us, it may be a problem with your browser's cache. To ensure that your browser has the latest information, please \"reload\" or \"refresh\" the current page with pressing F5 key on your PC or Apple key (Command touch) + R on your Macintosh.\r\n\r\nIt is also possible that your browser version isn't up to date. Please upgrade your version of browser software or try in another internet browser or other devices (computer, tablet or smartphone).": "Nous vous rappelons que les textes et photos sont soumis à la validation de nos services dans un délai de 3 jours ouvrable.\r\n\r\nLa gêne en question peut être aussi due au cache du navigateur Internet. Pour actualiser la page, veuillez la recharger en appuyant sur F5 sur un PC ou pomme+R sur Macintosh.\r\n\r\nIl se peut également que la version de votre navigateur ne soit pas à jour. Veuillez donc le mettre à jour, essayer avec un autre navigateur ou un autre appareil (ordinateur, tablette ou téléphone)."
+'TECHNICAL PROBLEM: I''m disconnecting and I lose ingoing typed information.': 'PROBLEME TECHNIQUE: Je suis déconnecté du site et perd les informations en cours de saisie!'
+"If you are connected  and you stay few minutes without doing an action (click on link or update page), your session take off and you must reconnect yourself.\r\n\r\nTo avoid this disconnection problem when you write for example your description, you can type it in a software like Microsoft Word, Open Office, Notepad or Texte Éditor and then copy/paste it on Parentsolo.ch.": "Si après vous être connecté, vous restez durant un certain temps en ne réalisant aucune action, votre session échouera. En effet, si vous ne cliquez sur aucun lien de la page, ni ne chargez de pages, vous serez obligé/e, après quelques minutes, de vous connecter à nouveau\r\n\r\nAfin d’éviter ces problèmes de déconnexion lors de la rédaction de votre annonce par exemple, veuillez rédiger celle-ci au moyen d’un autre logiciel (Microsoft Word, Open Office, Notepad, Texte Éditor) et réaliser ensuite un « copier-coller » de votre texte sur la page de votre annonce du site parentsolo.ch."
+'VISIT: How to know who has visited my profile?': 'VISITE: Comment savoir qui a visité mon profil ?'
+"Each time a visitor clicks on your profile, the number of visits received is increasing steadily. One click on your profile is a received visit. Each visit on your profile by a same member is already increasing steadily.\r\n\r\nTo know who has consulted your profile, you need to click on the people icon set at the middle of the dark band placed on the top of your dashboard. By this way, you will discover members who have visited your profile.": "A chaque fois qu'un visiteur clique sur votre profil, le nombre de visites reçues augmente. Un clic sur votre profil correspond à une visite reçue. Chaque visite de votre profil par un même membre est également comptabilisée.\r\n\r\nPour savoir quels membres ont consulté votre profil, il vous suffit de cliquer sur l'icône du personnage située au centre de la barre noir au sommet du tableau de bord. De cette manière, vous découvrirez les membres ayant visité votre profil."
+'I - Service Overview': 'I - Présentation du service'
+"Parentsolo.ch is an ecommerce site specializing in the virtual dating of solo parents (with children).\r\nBy joining, you can make contact with other members after choosing from our different subscription packages.\r\nParentsolo.ch service is accessible all year round, 24 hours a day and 7 days a week unless interrupted by force majeure.": "Parentsolo.ch est un site de commerce électronique spécialisé dans la rencontre virtuelle de parents solos (avec enfants).\r\nEn devenant membre, vous pourrez entrer en contact avec d'autres membres après avoir opté pour nos différentes formules d'abonnement.\r\nParentsolo.ch est un service accessible toute l'année, 24 heures sur 24 et 7 jours sur 7 sauf interruption en cas de force majeure."
+'II - Obligations of www.parentsolo.ch': 'II - Obligations de www.parentsolo.ch'
+"Parentsolo.ch provides a virtual dating service on the Internet where member photos and advertisements are checked before publication on the site. A control of user names is also provided by the moderators. However, the parties agree that any errors or omissions can not be totally excluded in the services sector and that Parentsolo.ch can not be held liable for these.\r\nParentsolo.ch is unable to control the accuracy of the information provided by the member as it is only a declaratory act. Consequently, Parentsolo.ch can not be held liable.\r\nParentsolo.ch agrees to permanently suspend any account that bears an improper user name.\r\nParentsolo.ch reserves the right to remove any improper advertisement or photo without priorly notifying the user.\r\nParentsolo.ch only has only one obligation of means and it cannot be held liable in the following cases:\r\nOperational difficulties or temporary interruption of the service beyond its control such as the interruption of computer, electricity, or telecommunications services,\r\nTemporary closure of the Parentsolo.ch site or closure of one or more of its services to perform an upgrade or modifications (not exhaustive). Parentsolo.ch will seek to suspend access during periods of low frequentation.\r\nMisconfiguration of the member's PC leading to malfunctions during usage of the Parentsolo.ch site.": "Parentsolo.ch fournit un service de rencontres virtuelles sur Internet dont les photos et annonces des membres sont contrôlées avant parution sur le site. Un contrôle des pseudos est également assuré par des modérateurs. Toutefois, les parties conviennent que les erreurs, les omissions ne peuvent être totalement exclues dans le domaine des services et que cela ne saurait engager la responsabilité de Parentsolo.ch\r\nParentsolo.ch n'est pas en mesure de contrôler l'exactitude des renseignements fournis par le membre car il ne s'agit que d'un acte déclaratif. Par conséquent, la responsabilité de Parentsolo.ch ne pourra être engagée.\r\nParentsolo.ch s'engage à suspendre définitivement tout compte porteur d'un pseudo incorrect.\r\nParentsolo.ch se réserve le droit de supprimer toute annonce ou photo incorrecte sans en avertir l'utilisateur préalablement.\r\nParentsolo.ch n'a qu'une obligation de moyen et sa responsabilité ne saurait être engagée dans les cas suivants:\r\nDifficultés de fonctionnement ou interruption momentanée du service indépendant de sa volonté notamment en cas d'interruption des services informatiques, d'électricité ou des télécommunications,\r\nFermeture temporaire du site Parentsolo.ch ou fermeture d'un ou plusieurs de ses services pour effectuer une mise à jour ou des modifications (liste non exhaustive). Parentsolo.ch s'efforcera de suspendre l'accès pendant des périodes de faible affluence.\r\nMauvaise configuration du PC du membre entrainant des dysfonctionnements lors de l'utilisation du site Parentsolo.ch."
+'III - Obligations of the member': 'III - Obligations du membre'
+"The registration on Parentsolo.ch implies total acceptance of these General Conditions of Use.\r\nA registration must concern one and only one user. Registration is free; this same includes the submission of your advertisement, the addition of a photo, and information on your profile.\r\nTo access all of our services you must chose one of our subscription packages.\r\nThe member agrees to:\r\nbe aged 18 years minimum\r\nliving in Switzerland\r\nnot to use offensive, obscene, discriminatory, violent, or racist language\r\nnot to use our website to send solicitations of a professional or commercial nature, nor to propose dates of a venal nature\r\nnot to collect, store and/or disseminate personal data from other users\r\nprovide true data on registration\r\nnot to disclose their last name, postal or email address, phone number or any other information that allows other members to identify them\r\nremain correct and courteous to other members\r\nnot to ask for money in return for any service whatsoever\r\nnot to promote a website or any service whatsoever\r\nnot to distract the other members of the Parentsolo.ch site towards other sites or competing services\r\nnot to post, indicate, or disseminate in any form whatsoever information or content whose effect is to alter the performance of the Parentsolo.ch services\r\nnot to disseminate information on third party websites that have an illegal nature, contrary to good morals\r\nkeep their login ID safe and not to disclose it to third parties\r\nupload photos on-line that represent them\r\nIn case of non compliance with these obligations, your profile is liable to be deleted without notice or refund.\r\nIf you are in contact with a member who fails to comply with any of these obligations, please kindly let us know by reporting the profile of this same.": "L'inscription sur Parentsolo.ch entraîne l'acceptation totale des présentes Conditions Générales d'Utilisation.\r\nUne inscription doit concerner un et un seul utilisateur. L'inscription est gratuite, celle-ci comprend le dépôt de votre annonce, l'ajout d'une photo et des informations sur votre profil.\r\nPour accéder à l'ensemble de nos services vous devez opter pour l'une de nos formules d'abonnement.\r\n\r\nLe membre s'engage à:\r\nêtre âgé de 18 ans minimum\r\nrésider en Suisse, \r\nne pas utiliser de langages injurieux, obscène, discriminatoire, violent ou raciste\r\nne pas utiliser notre site pour envoyer des sollicitations à caractère professionnel ou commercial, ni de proposition de rencontres à caractère vénal\r\nne pas collecter, stocker et/ou diffuser des données personnelles provenant d'autres utilisateurs\r\nfournir des données réelles lors de son inscription\r\nne pas divulguer son nom de famille, adresse postale ou électronique, numéro de téléphone ou toute information permettant aux autres membres de l'identifier\r\nrester correct et courtois avec les autres membres\r\nne pas demander d'argent en contrepartie de quelque service que ce soit\r\nne pas faire de promotion pour un site Internet ou un service quel qu'il soit\r\nne pas détourner les autres membres du site Parentsolo.ch vers d'autres sites ou services concurrents\r\nne pas poster, indiquer, ni diffuser sous quelque forme que ce soit des informations ou contenus ayant pour effet d'altérer les performances des services Parentsolo.ch\r\nne pas diffuser des informations sur des sites tiers qui auraient un caractère illégal, contraire aux bonnes mœurs\r\nconserver secret ses identifiants et à ne pas les divulguer à des tiers\r\nmettre en ligne des photos de profil le représentant\r\nEn cas de non respect de ces obligations, votre profil sera susceptible d'être supprimé sans préavis ni remboursement.\r\nSi vous êtes en contact avec un membre qui ne respecte pas l'une de ces obligations, nous vous prions de bien vouloir nous en informer en signalant le profil de celui-ci."
+'IV - Registration and usage of the site': 'IV - Inscription et utilisation du site'
+"These Terms of Use are effective upon your registration on the Parentsolo.ch site.\r\n\r\nThe website features is subject to subscription or option package buying by the member like it is describe on Pricing, Subscription or Shop pages. The features available for member depend to his level of the subscription he had chosen and the summary of subscription features listed on the same pages. Some features are also available in option for some subscription level selling in package.\r\n\r\nSubscription or option pricing are defined on Pricing, Subscription or Shop website pages. Prices are given by level and duration from subscription or in package from options. All prices are quoted in Swiss Francs (CHF). Prices may be changed at any time by Parentsolo.ch according to this terms. Those changes do not require any specific communication at members excepted their publishing on Pricing, Subscription or Shop website pages.": "Les présentes Conditions Générales d'Utilisation du service entrent en vigueur dès votre inscription sur le site Parentsolo.ch\r\n\r\nL'utilisation des fonctionnalités du site est soumise à abonnement ou achat de package en option par le membre, selon le descriptif des pages Tarif, Abonnement et/ou Shop du site. Les fonctionnalités offertes aux membres dépendent du niveau d'abonnement auquel il a souscrit selon le descriptif mentionné sur ces mêmes pages. Certaines fonctionnalités sont accessibles en option selon le type d'abonnement souscrit, il s'agit de package vendu à l'unité.\r\n\r\nLes tarifs des abonnements et des options sont définis sur les pages Tarif, Abonnement et/ou Shop du site, ils s'entendent par formule et selon la durée d'abonnement choisi ou en package pour les options. Tous les prix sont exprimés en CHF. Les tarifs peuvent être modifié à tout moment par Parentsolo.ch, selon les présentes, leur modification ne nécessitent pas de communication spécifique aux membres. La modification des tarifs entre en vigueur dès la publication des Tarifs sur les pages Tarif, Abonnement et/ou Shop du site, l'utilisateur ayant ainsi accès aux nouveaux tarifs."
+'V - Functioning of the Parentsolo.ch website': 'V - Fonctionnement du site Parentsolo.ch'
+"For the site to function correctly you must:\r\naccept the pop-ups\r\nauthorize the execution of javascript\r\naccept cookies\r\ninstall the Flash plug-in version 8 minimum\r\npreferably use a PC\r\nuse Internet Explorer 9 (and higher) or Firefox 1.5 (and higher)": "Pour que le site fonctionnement correctement vous devez:\r\naccepter les pop-up\r\nautoriser l'exécution du javascript\r\naccepter les cookies\r\ninstaller le plug-in flash version 8 minimum\r\nutiliser de préférence un PC\r\nutiliser Internet Explorer 9 (et supérieur) ou Firefox 1.5 (et supérieur)"
+members: Membres
+leave.group: 'Quitter le groupe'
+join.group: 'Rejoindre le groupe'
+'VI - Managing your account': 'VI - Gestion de votre compte'
+"DESCRIPTION, PHOTO, USERNAME \r\nYour description, photos and nick-name are subject to review by our moderators, as soon as possible from Monday to Friday between 9.00 and 18.00, before validation. Your profile and photos will be published on the Parentsolo.ch site if they comply with these General Conditions of Use. \r\nOtherwise, we reserve the right to reject and delete them without notice and without the possibility of requesting any refund. The following are denied: \r\nphotos that clearly do not represent you (photos of animals, landscapes, public figures) \r\nphotos of a pornographic or sexy nature poor quality \r\nphotos (too blurry, too dark, etc...) \r\ndrawings and illustrations \r\ndescription that are saucy, sexy, of a sexual nature, without future, unserious \r\ndescription that criticize our service, or damage its image and its reputation profiles of a commercial nature \r\nFor reasons of security and identification, your user name can be changed at your request once and only once. To do this you must go through the contact form. \r\nPERSONALS DETAILS \r\nWhen you register, your name, full address, and telephone number will be requested by us. By communicating that to us you agree that the Parentsolo.ch moderators contact you so they can perform the usual checks on your profile and this without notification. Parentsolo.ch guarantees that these details remain strictly confidential and undertakes not to use them for commercial ends. \r\nACCOUNT\r\nParentsolo.ch reserves the right to alter and/or delete your account without notice and no refund can be requested. Duration of your registration: Your registration is active after control and until you deactivate or delete your account. \r\nTermination: You can delete your account at anytime by following the « Stop my subscription »\r\n link at the bottom of the account settings page and then on click to the related link just under of the agreement button from the deactivate account form. This action will delete all of your personnal data on our data base, except for abuse or outstanding invoice. The deleted account and data process will be complete only after you will received the Email confirmation. If you don’t receive our Emails please check your spam mailbox. In case of dispute, this last email confirmation will only be considered as authenticate and in anyway the email with the link to click. \r\nSuspension: The suspension of your profile means you will be permanently unable to connect to the parentsolo.ch site. \r\nThis action on our part can be carried out at any time if we find a breach of these General Conditions of Use. The suspension, removal, or deactivation of your profile or even the termination of your subscription does not entitle you to any refund.": "ANNONCE, PHOTOS ET PSEUDO \r\nVos annonce, photos et pseudo sont soumis au contrôle de nos modérateurs, au plus vite du lundi au vendredi entre 9h et 18h, avant validation. Votre annonce et vos photos seront publiées sur le site Parentsolo.ch si elles respectent les présentes Conditions Générales d'Utilisation. Dans le cas contraire, nous nous réservons le droit de les refuser et de les supprimer sans préavis et sans qu'aucun remboursement puisse être demandé. \r\nSont refusées: \r\nles photos qui, à l'évidence, \r\nne vous représentent pas (photos d'animaux, photos de paysages, de personnalités publiques) \r\nles photos à caractère pornographique ou sexy les photos de mauvaise qualité (trop floues, trop sombres, etc...) \r\ndes dessins et des illustrations \r\ndes annonces coquines, sexy à caractère sexuel, sans lendemain, non sérieuses \r\ndes annonces comportant des critiques de notre service, des atteintes à son image et à sa notoriété \r\ndes annonces à caractère publicitaire \r\nPour des raisons de sécurité et d'identification, votre pseudo ne peut être modifié à votre demande qu'une seule et unique fois. Pour cela vous devez passer par le formulaire de contact. \r\nCOORDONNÉES PERSONNELLES \r\nLors de votre inscription vos nom, prénom, adresse complète et numéro de téléphone vous seront demandés, en nous les communicant, vous acceptez que les modérateurs de Parentsolo.ch vous contactent afin qu'ils puissent effectuer les vérifications d'usage sur votre profil et ce sans préavis. Parentsolo.ch garantit que ces coordonnées restent STRICTEMENT CONFIDENTIELLES et s'engage à ne pas se servir de celles-ci à des fins commercials. \r\nCOMPTE \r\nParentsolo.ch se réserve le droit de modifier et/ou supprimer votre compte sans préavis et sans qu'aucun remboursement ne puisse être demandé. Durée de votre inscription: Votre inscription est effective, après validation, tant que vous ne désactivez pas ou ne supprimez pas votre compte.\r\nRésiliation: Vous pouvez supprimer votre compte à tout moment en passant par le lien « arrêter mon abonnement » placé au bas de la page des paramètres de votre compte, puis en cliquant sur le lien correspondant sous le bouton valider du formulaire de désactivation du compte. Cette action entraîne la suppression de toutes les données vous concernant en notre possession, sauf en cas d'abus et/ou de périodes d'abonnement restants dues à Parentsolo.ch. La demande de suppression du compte et de ses informations est prise en considération uniquement après que le membre est reçu la confirmation de suppression par Email. Soyez attentif, vérifier que ces deux emails ne soient pas arrivés dans vos messages indésirables, c'est l'e-mail confirmant la désinscription qui fera foi en cas de litige et en aucun cas celui portant le lien de validation de la demande! \r\nSuspension: La suspension de votre profil entraîne pour vous l'impossibilité définitive de vous connecter au site parentsolo.ch. \r\nCette action, de notre part, peut être effectuée à tout moment si nous constatons un non respect des présentes Conditions Générales d'Utilisation. La suspension, la suppression ou la désactivation de votre profil ou encore la résiliation de votre abonnement ne donne droit à aucun remboursement."
+title: Titre
+'VII - Subscription & Options: automatic renewal, prices and means of payment': 'VII - Abonnement & Options: renouvellement automatique, prix et moyens de paiement'
+"AUTOMATIC RENEWAL\r\nAt any time, the member can notify to Parentsolo.ch to terminate his subscription. The termination will be effective at the end of the current subscription.\r\nAt the expiration of the subscription, this will be automatically renewed for the duration of the initial subscription, except if the termination is notified to Parentsolo.ch before the end of the current subscription in accordance with the specified conditions. The extended subscription will be charged to the member on the pricing basis of the subscription initially chosen by the member. \r\nFor technical reasons, the cancellation of the subscription can not be made during the 24 hours after the purchase of the subscription and the 7 days before the due date of the current subscription.\r\nAt any time, the member will be able to terminate the extended subscription, this will be effective after the end of the period covered by the last invoicing, only if the member has followed the process under at the latest 7 working days before the end to the current subscription.\r\nYou can Stop your subscription at anytime by following the link at the bottom of the account settings page. The process will be complete only after you will receive the confirmation by Email. If you don’t received it please check your SPAM mailbox.\r\nNo refund or compensation is possible in the event of deactivation, deletion, or suspension of membership during the paid period. In case of earlier payback by our service, the payment will be only on the same type of payment made by members.\r\nPRICE AND MEANS OF PAYMENT\r\nPrices and payement methods are describe on the website. Le payement is filled by Credit Card (on Internet or a mobile devic), by a online payement service (PayPal, Direct Debit, ...) or bank transfer according to the options proposed by the website. Prices are indicated in CHF including taxes.\r\nIf an option related to a subscription is activated during an available subscription, this option will be immediatly available for the subscriver.\r\nFor esch subscription realize by the online payement service PayPal, a fee of CHF 2.50 is added to the subscription cost.": "RENOUVELLEMENT AUTOMATIQUE\r\nLe Membre peut à tout moment notifier à Parentsolo.ch son souhait de résilier son Abonnement. La résiliation prendra effet à la date d'échéance de l'Abonnement en cours.\r\nA l'expiration d'un Abonnement, celui-ci sera, sauf résiliation notifiée par le Membre à Parentsolo.ch avant l'échéance de l'Abonnement en cours dans les conditions indiquées, renouvelé par périodes égales à la durée de l'Abonnement souscrit initialement.\r\nL'Abonnement ainsi prorogé sera facturé au Membre sur la base tarifaire de l'Abonnement auquel le Membre à souscrit initialement.\r\nPour des raisons techniques, la résiliation de l’abonnement ne pourra être faite pendant les 24h après l’achat de l’abonnement et les 7 jours avant la date d’échéance de l’abonnement en cours.\r\nLe Membre pourra résilier à tout moment l'Abonnement prorogé qui prendra alors fin à l'issue de la période de la durée de l'Abonnement couverte par la dernière facturation à la condition que la procédure suivante soit réalisée par le membre au plus tard 7 jours ouvrés avant la date d'échéance de l'Abonnement en cours.\r\nVous pouvez arrêter votre abonnement à tout moment en passant par le lien situé en bas de la page de paramètres de votre compte et en suivant la procédure indiquée. La procédure n'est valide qu'une fois que vous avez reçu l'email de validation. \r\nLa suspension, la suppression ou la résiliation de votre abonnement ne donne droit à aucun remboursement. En cas de remboursement par nos services, le montant remboursé s’effectuera exclusivement sur le moyen de paiement d’origine effectué par le membre.\r\n\r\nPRIX ET MOYENS DE PAIEMENT\r\nLes prix et les modalités de paiement sont décrits sur les Sites. Le paiement s’effectue soit par carte bancaire (sur internet ou sur un service mobile), soit au moyen d’un service de paiement en ligne (PayPal, Direct Debit etc.), soit par virement bancaire, selon les options proposées sur le Site concerné. Les prix sont indiqués en CHF TTC (toutes taxes comprises). \r\nSi une Option liée à un Abonnement est souscrite en cours d’Abonnement, l’Abonné bénéficie immédiatement des avantages de l’Option. \r\nPour les transactions effectuer via le service de paiement en ligne PayPal des frais de gestion de CHF 2.50 sont facturés en plus du montant de l'abonnement."
+'VIII - Protection of minors': 'VIII - Protection des mineurs'
+"Attainment of authorisation is the rule. In its absence, the person who reproduces and distributes the image without authorisation is liable. So those who reproduce the image of a child without having first obtained parental consent are in breach.\r\nYou are fully liable as soon as the \"read and approved\" box is checked when uploading photos of your children. In case of violation of this clause, the person may be prosecuted before the competent courts of Geneva.\r\nIn case of doubt on the validity of the user's profile, Parentsolo.ch can also immediately notify the Geneva authorities if it was determined that the images were ambiguous, or if the information was false or counterfeited, concerning the whole of the \"child\" section of the Parentsolo.ch site.": "Le recueil d'une autorisation est la règle. Son absence engage la responsabilité de celui qui reproduit et diffuse l'image sans autorisation. Ainsi, commettent une faute ceux qui reproduisent l'image d'un enfant sans en avoir préalablement obtenu l'autorisation des parents.\r\nVotre responsabilité est totalement engagée dès lors que la case \"lu et approuvé\" est cochée au moment du téléchargement des photos de vos enfants.\r\nEn cas de violation de cet article, la personne pourra être poursuivie en justice, devant les tribunaux compétents de Genève.\r\nParentsolo.ch, en cas de doute sur le bien-fondé du profil de l'utilisateur, pourrait également prévenir immédiatement les autorités de Genève, si il était établi que des photos soient ambiguës, ou si les informations étaient erronées ou falsifiées, concernant l'ensemble de la partie \"enfant\" du site Parentsolo.ch."
+'IX - Tips for actual dating': 'IX - Conseils pour vos rencontres réelles'
+"Prefer a crowded public place for your first meeting: cafe, bar, etc…\r\nDespite all the security checks, Parentsolo.ch can not be held liable for malicious individuals. This is the reason why we ask you to inform someone close to you of the place and time of your date and, if need be, get someone to accompany you.\r\nDo not give your personal contact details to a person with whom you have contact through our Parentsolo.ch site before getting to know them well. In case of dispute our liability cannot be incurred. You can always inform us through the link in the profile description of a member's dishonesty. If your request seems justified, we will consider removing the profile in question.": "Préférez un lieu public et fréquenté pour votre premier rendez-vous: café, bar, etc...\r\nMalgré tous les contrôles de sécurité, Parentsolo.ch ne peut être tenu responsable d'individus mal intentionnés. La raison pour laquelle nous vous demandons d'informer une personne de votre entourage de votre lieu et heure de rendez-vous et au besoin faites-vous accompagner.\r\nNe donnez pas vos coordonnées personnelles avant de bien connaître la personne avec qui vous avez des contacts grâce à notre site Parentsolo.ch\r\nEn cas de litige notre responsabilité ne pourra être engagée.\r\nVous avez toujours la possibilité de nous informer grâce au lien présent dans la description d'un profil de la malhonnêteté d'un membre. Si votre requête nous semble justifiée, nous pourrons envisager la suppression du profil en cause."
+'X - Intellectual Property': 'X - Propriété intellectuelle'
+"The texts, photos, logos, trademarks and other items displayed on the parentsolo.ch site are reserved and protected by intellectual property law. The user may not modify, reproduce, distribute, download, transmit, copy, sell any part whatsoever of the Parentsolo.ch site. Any unlawful use of all or part of the site will result in legal action. \r\nBy registering on the Parentsolo.ch site, the member grants Parentsolo.ch a license to use the intellectual property rights for the information and contents of the member disseminated on the Website. \r\nThe Member expressly authorizes Parentsolo.ch to reproduce, modify, use for publicity purposes, commercial or not, its information and contents in any medium of communication. Parentsolo.ch reserves the right to use and publish the stories of its members and their photos on the Parentsolo.ch site as part of the activity thereof.\r\nPhoto & picture credit:\r\nHome Page iStockphoto.com: monkeybusinessimages, Deagreez and AzmanL\r\nProfile symbols: centre of interests freepik.com - designed by rawpixel.com, default people freepik.com, concept & group fr.vecteezy.com\r\nPhoto in the profile pages banner: freepik.com - designed by photoangel": "Les textes, photos, logos, marques et autres éléments reproduits sur le site parentsolo.ch sont réservés et protégés par le droit de la propriété intellectuelle.\r\nL'utilisateur s'interdit de modifier, reproduire, diffuser, télécharger, transmettre, copier, commercialiser quelque élément que ce soit du site Parentsolo.ch\r\nToute utilisation illicite de tout ou partie du site donnera lieu à des poursuites judiciaires.\r\nEn s'inscrivant sur le site Parentsolo.ch le membre concède à Parentsolo.ch une licence d'utilisation des droits de propriété intellectuelle concernant les informations et contenus du membre diffusés sur le site Web.\r\nLe membre autorise expressément Parentsolo.ch à reproduire, modifier, utiliser à des fins publicitaires, commerciales ou non ses informations et contenus sur tout support de communication.\r\nParentsolo.ch se réserve le droit d'utiliser et de publier les témoignages de ses membres, ainsi que leurs photos, sur le site Parentsolo.ch dans le cadre de l'activité de celui-ci.\r\nCrédit photo & image: \r\nHome Page iStockphoto.com: monkeybusinessimages, Deagreez et AzmanL\r\nIcônes du profil : centre d’intérêts freepik.com - designed by rawpixel.com, personne par défaut freepik.com, concept & groupe fr.vecteezy.com\r\nPhoto du bandeau des pages profil: freepik.com - designed by photoangel"
+'new visit': 'Vous avez une nouvelle visite'
+'as visit your profile': 'a visité votre profil'
+'no visit': 'Aucune nouvelle visite'
+back: Retour
+talking.threat.alias: 'Définissez votre pseudo'
+talking.threat.alias.error: 'Ce pseudo n''est pas disponible'
+my.conversations: 'Mes conversations'
+my.visits: 'Mes visites'
+flower.received: 'Mes roses'
+favorite.add: 'Ajouter aux favoris'
+parameter.error: 'Pour augmenter vos chances de rencontres: ajouter votre photo, votre annonce, vos enfants et complétez votre profil!'
+deadline: 'Fin d’abonnement'
+file.name: 'Nom du fichier'
+is.profile: 'Définir comme photo de profil'
+'card number': 'Numéros de carte'
+'full name': 'Nom complet'
+know.card: 'Mes cartes enregistrées'
+'flower red': 'Elle est connue pour être le symbole de l''amour passion. Le rouge peut témoigner du côté charnel et sensuel d''une relation, mais aussi représenter le sang de la blessure, de la souffrance et de la passion amoureuse.'
+'flower coral': 'Elle reflète le désir et l''enthousiasme.'
+'flower white': 'Elle symbolise l''amour pur par excellence. Le blanc est communément utilisé pour symboliser la pureté, la virginité, mais également le raffinement et l''élégance. Elle permet d''exprimer un amour naissant avec pureté et sincérité..'
+'flower blue': 'Elle évoque le mystère ou l''atteinte de l''impossible, espoir éternel. Elle serait capable d''apporter la jeunesse à celui qui la détient et aurait le pouvoir de réaliser ses voeux.'
+'flower lavender': 'Elle symbolise le coup de foudre, l''amour immédiat au premier regard.'
+'flower yellow': 'Elle exprime une amitié sincère ou un amour dont on ne sait s''il est réciproque. Elle est idéale pour se déclarer sans prendre trop de risque. Elle peut aussi symboliser la jalousie.'
+'flower orange': 'Elle symbolise le besoin d''amour.'
+'flower pink': 'Elle suggère joie, gentillesse et tendresse. Elle rend hommage à la beauté de celle qui la reçoit. Elle symbolise aussi tout simplement l''amitié.'
+'flower black': 'Elle exprime la fin d''une relation ou d''un amour. Elle est offerte, parfois de manière cynique à l''occasion d''une rupture ou d''une séparation.'
+no.message: 'Pas de message'
+hide: Masquer
+'XI - GDPR – General Data Protection Regulation': 'XI - RGPD - Règlement Général sur la Protection des Données'
+"1. PERSONAL DATA \r\nWords \"personal data\", \"persons concerned\", \"subcontractor\" and \"sensitive data\" are defined in the General Data Protection Regulation (GDPR n°2016-679). The customer is advised by the legislation in force in Switzerland about communication and marketing, Federal Act on Data Protection (FADP) of 19 June 1992. \r\nAs responsible of the data collection, Parentsolo.ch shall follow the legal  provisions in force related to the FADP. The customer has to defined the final destination of his personal data since the collect to the consent. Prospect and customer must received a fluent information about the processing of their personal data. A register of the processing must be kept in order to the reality. At anytime that Parentsolo.ch is processing Personal Data, Parentsolo.ch shall take every reasonable steps to achieve a high standard of relevance and accuracy of personal data in relation to the purposes for which they are collected\r\nParentsolo.ch could treat all or part of data to:\r\n*allow navigation on the website and traceability of services ordered by the user : connexion data and use of website, invoice, order history, etc.\r\n*prevent and fight against computer fraud (spamming, hacking, …) : computer equipment using for website navigation, IP address and password (hashed)\r\n*improve site navigation : connexion and using data\r\n*conduct voluntary satisfaction survey about Parentsolo.ch : Email address\r\n*carry out communications campaigns (SMS, Emailing) : phone number, Email address\r\nParentsolo.ch will not sell or otherwise market your personal data which are only used by necessity or for analysis and statistical reporting.\r\nRequests to delete personal data will be subject to any applicable legal (FADP) and ethical reporting or document filing or retention obligations imposed on us.\r\nUser personal data may be treated by Parentsolo.ch subsidiaries and subcontractors (services providers) exclusively to achieve this purpose Policy.\r\nWithin the limits of their respective competencies and for the purposes set out above, the main people who may allow access to Parentsolo.ch users data are mainly our customer service officers.\r\n\r\n2. INCIDENT AND SAFETY NOTIFICATION\r\nWhatever efforts we make no data transmission over Internet and no electronic storage method can be guaranteed to be absolutely secure.\r\nIf we take note of a security breach, we will signify to affected users so that they can take appropriate action. Our incident notification process take account of our legal obligation under federal or european authority. We are fully committed to inform our customers in all matters about their account security and to give all necessary information helping them to meet their own obligations with reporting.\r\nNone of the Parentsolo.ch user's personal information is  published without the user's knowledge, exchanged, transferred, given up or sold to a third parties.\r\nOnly the hypothesis of the buyback of Parentsolo.ch and its rights would allow the transmission of the aforementioned information to the possible buyer who would be held in his turn by the same obligation of preservation and of modification of the data concerning the user of the Parentsolo.ch site.\r\nTo ensure personal data and heath personal data privacy and security, Parentsolo.ch use data networks protected, such as standard firewall, pseudonymisation, encryption and password protection.\r\nWhen processing personal data Parentsolo.ch shall take all reasonable steps to protect such information from loss, unauthorized access, disclosure, inappropriate alteration, unauthorized destruction, or misuse.\r\n\r\n3. HYPERLINKS\r\nThe website Parentsolo.ch contains a number of hyperlink to other websites, put in place under the authority of Parentsolo.ch. However Parentsolo.ch doesn’t have the possibility to check content from website visited and therefore disclaims all responsibility in this regard.\r\nExcept if you disable your cookies, you are agree that the website can use them. While you can disable the use of cookies for free in your web browser or with the following possibilities, this may prevent you from making use of all of our products and services.\r\n\r\n4. COOKIES\r\nA cookie is a small file of information that the server may send to your device (computer or smartphone) when you visit a website.\r\nThis file can contain user’s information, such as, domain, Internet provider, operating system as well as data and time access. In no case may the cookies damage the user material.\r\nParentsolo.ch could treat the user information about his visit such as consulting pages or search made. Those information allow Parentsolo.ch to improve website content and user navigation.\r\nThe use of cookies allowing an easier browsing and/or  the services provided by the website, the user can set his browser to decide if he would or not accept them in such a manner that cookies be saved on the terminal or contrary be rejected systematically or depending on the issuer.\r\nThe user can also set his browser so that accepting or rejecting cookies could be punctually asked before that a cookie will be saved on his terminal. In this case Parentsolo.ch informs users that it is possible that functionabilities from his browser could not be available.\r\nIf the user reject cookies storage on his terminal, he is informed that his navigation and experience on the website could be limited. It would be also the case whole Parentsolo.ch or one of his providers could not recognized for technical count, the browser used by the terminal, language or display settings or the country where the terminal is connected to Internet. If appropriate Parentsolo.ch accepts no liability for consequences of the degraded tasks relating to the website or services provided byParentsolo.ch, resulting (i) of the rejecting cookies by user (ii) Parentsolo.ch failure to enrole or consults necessary cookies needed for his operation due to user choice. For cookies processing and relevant choice of user, setup may be different in each browser. As described in the helping item from browser menu, it allows to know how user could modify his wishes about cookies.\r\nAt any time, user could choice to change his needs and wishes concerning cookies.  Parentsolo.ch could also making use of services offered by external provider helping to collect and treat these informations described in this section.\r\nFinally by clicking over social networks icons Twitter, Facebook, Instagram, Linkedin Youtube or Google + on the website Parentsolo.ch and if user have accepted the deposit of cookies by following his navigation on the website or the smartphone application from Parentsolo.ch, Twitter, Facebook, Instagram, Linkedin Youtube or Google + may also place or recognize cookies in your systems (computer, tablet, smartphone). Those sort of cookies are filled on your systems as condition of you consent otherwise by continuing to navigate on Parentsolo.ch website.": "1. DONNEES PERSONNELLES\r\nLes termes « données à caractère personnel », « personne concernée », « sous traitant » et « données sensibles » ont le sens défini par le Règlement Général sur la Protection des Données (RGPD : n° 2016-679).\r\nLe Client est informé des réglementations en vigueur en Suisse concernant la communication marketing, la loi fédérale sur la protection des données LPD du 19 Juin 1992.\r\nEn tant que responsable du traitement des données qu’il collecte, Parentsolo.ch s’engage à respecter le cadre des dispositions légales en vigueur (LPD). Il lui appartient notamment au Client d’établir les finalités de ses traitements de données, de fournir à ses prospects et clients, à partir de la collecte de leurs consentements, une information complète sur le traitement de leurs données personnelles et de maintenir un registre des traitements conforme à la réalité.\r\nChaque fois que Parentsolo.ch traite des Données Personnelles, Parentsolo.ch prend toutes les mesures raisonnables pour s’assurer de l’exactitude et de la pertinence des Données Personnelles au regard des finalités pour lesquelles Parentsolo.ch les traite.\r\nParentsolo.ch est susceptible de traiter tout ou partie des données :\r\n•pour permettre la navigation sur le Site et la gestion et la traçabilité des prestations et services commandés par l’utilisateur : données de connexion et d’utilisation du Site, facturation, historique des commandes, etc.\r\n•pour prévenir et lutter contre la fraude informatique (spamming, hacking…) : matériel informatique utilisé pour la navigation, l’adresse IP, le mot de passe (hashé)\r\n•pour améliorer la navigation sur le Site : données de connexion et d’utilisation\r\n•pour mener des enquêtes de satisfaction facultatives sur Parentsolo.ch: adresse email\r\n•pour mener des campagnes de communication (sms, mail) : numéro de téléphone, adresse email\r\nParentsolo.ch ne commercialise pas vos données personnelles qui sont donc uniquement utilisées par nécessité ou à des fins statistiques et d’analyses.\r\nLes demandes de suppression de Données Personnelles seront soumises aux obligations qui sont imposées à Parentsolo.ch par la loi (LPD), notamment en matière de conservation ou d’archivage des documents.\r\nLes Données Personnelles de l’Utilisateur peuvent être traitées par des filiales de Parentsolo.ch et des sous-traitants (prestataires de services), exclusivement afin de réaliser les finalités de la présente politique. Dans la limite de leurs attributions respectives et pour les finalités rappelées ci-dessus, les principales personnes susceptibles d’avoir accès aux données des Utilisateurs de Parentsolo.ch sont principalement les agents de notre service client.\r\n\r\n2. NOTIFICATION D’INCIDENT ET SECURITE\r\nQuels que soient les efforts fournis, aucune méthode de transmission sur Internet et aucune méthode de stockage électronique n’est complètement sûre. Nous ne pouvons en conséquence pas garantir une sécurité absolue.\r\nSi nous prenions connaissance d’une brèche de la sécurité, nous avertirions les utilisateurs concernés afin qu’ils puissent prendre les mesures appropriées. Nos procédures de notification d’incident tiennent compte de nos obligations légales, qu’elles se situent au niveau national ou européen. Nous nous engageons à informer pleinement nos clients de toutes les questions relevant de la sécurité de leur compte et à leur fournir toutes les informations nécessaires pour les aider à respecter leurs propres obligations réglementaires en matière de reporting.\r\nAucune information personnelle de l’utilisateur du site Parentsolo.ch n’est publiée à l’insu de l’utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l’hypothèse du rachat de Parentsolo.ch  et de ses droits permettrait la transmission des dites informations à l’éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l’utilisateur du site Parentsolo.ch.\r\nPour assurer la sécurité et la confidentialité des Données Personnelles et des Données Personnelles de Santé, Parentsolo.ch utilise des réseaux protégés par des dispositifs standards tels que par pare-feu, la pseudonymisation, l’encryption et mot de passe. \r\nLors du traitement des Données Personnelles, Parentsolo.ch prend toutes les mesures raisonnables visant à les protéger contre toute perte, utilisation détournée, accès non autorisé, divulgation, altération ou destruction.\r\n\r\n3. LIENS HYPERTEXTES\r\nLe site Parentsolo.ch contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Parentsolo.ch. Cependant, Parentsolo.ch n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.\r\nSauf si vous décidez de désactiver les cookies, vous acceptez que le site puisse les utiliser. Vous pouvez à tout moment désactiver ces cookies et ce gratuitement à partir des possibilités de désactivation qui vous sont offertes et rappelées ci-après, sachant que cela peut réduire ou empêcher l’accessibilité à tout ou partie des Services proposés par le site.\r\n\r\n4. « COOKIES »\r\nUn « cookie » est un petit fichier d’information envoyé sur le navigateur de l’Utilisateur et enregistré au sein du terminal de l’Utilisateur (ex : ordinateur, smartphone), (ci-après « Cookies »). Ce fichier comprend des informations telles que le nom de domaine de l’Utilisateur, le fournisseur d’accès Internet de l’Utilisateur, le système d’exploitation de l’Utilisateur, ainsi que la date et l’heure d’accès. Les Cookies ne risquent en aucun cas d’endommager le terminal de l’Utilisateur.\r\nParentsolo.ch est susceptible de traiter les informations de l’Utilisateur concernant sa visite du Site, telles que les pages consultées, les recherches effectuées. Ces informations permettent à Parentsolo.ch d’améliorer le contenu du Site, de la navigation de l’Utilisateur.\r\nLes Cookies facilitant la navigation et/ou la fourniture des services proposés par le Site, l’Utilisateur peut configurer son navigateur pour qu’il lui permette de décider s’il souhaite ou non les accepter de manière à ce que des Cookies soient enregistrés dans le terminal ou, au contraire, qu’ils soient rejetés, soit systématiquement, soit selon leur émetteur. L’Utilisateur peut également configurer son logiciel de navigation de manière à ce que l’acceptation ou le refus des Cookies lui soient proposés ponctuellement, avant qu’un Cookie soit susceptible d’être enregistré dans son terminal. Parentsolo.ch informe l’Utilisateur que, dans ce cas, il se peut que les fonctionnalités de son logiciel de navigation ne soient pas toutes disponibles.\r\nSi l’Utilisateur refuse l’enregistrement de Cookies dans son terminal ou son navigateur, ou si l’Utilisateur supprime ceux qui y sont enregistrés, l’Utilisateur est informé que sa navigation et son expérience sur le Site peuvent être limitées. Cela pourrait également être le cas lorsque Parentsolo.ch ou l’un de ses prestataires ne peut pas reconnaître, à des fins de compatibilité technique, le type de navigateur utilisé par le terminal, les paramètres de langue et d’affichage ou le pays depuis lequel le terminal semble connecté à Internet.\r\nLe cas échéant, Parentsolo.ch décline toute responsabilité pour les conséquences liées au fonctionnement dégradé du Site et des services éventuellement proposés par Parentsolo.ch, résultant (i) du refus de Cookies par l’Utilisateur (ii) de l’impossibilité pour Parentsolo.ch d’enregistrer ou de consulter les Cookies nécessaires à leur fonctionnement du fait du choix de l’Utilisateur. Pour la gestion des Cookies et des choix de l’Utilisateur, la configuration de chaque navigateur est différente. Elle est décrite dans le menu d’aide du navigateur, qui permettra de savoir de quelle manière l’Utilisateur peut modifier ses souhaits en matière de Cookies.\r\nÀ tout moment, l’Utilisateur peut faire le choix d’exprimer et de modifier ses souhaits en matière de Cookies. Parentsolo.ch pourra en outre faire appel aux services de prestataires externes pour l’aider à recueillir et traiter les informations décrites dans cette section.\r\nEnfin, en cliquant sur les icônes dédiées aux réseaux sociaux Twitter, Facebook, Linkedin et Google Plus figurant sur le Site de Parentsolo.ch et si l’Utilisateur a accepté le dépôt de cookies en poursuivant sa navigation sur le Site Internet ou l’application mobile de Parentsolo.ch, Twitter, Facebook, Linkedin et Google Plus peuvent également déposer des cookies sur vos terminaux (ordinateur, tablette, téléphone portable).\r\nCes types de cookies ne sont déposés sur vos terminaux qu’à condition que vous y consentiez, en continuant votre navigation sur le Site Internet deParentsolo.ch."
+'XII - Advertising': 'XII - Publicité'
+'Parentsolo.ch reserves the right to distribute advertising content on its website.': 'Parentsolo.ch se réserve le droit de diffuser des contenus publicitaires sur son site Web.'
+'XIII - Publisher of the site': 'XIII - Editeur du site'
+"Swissthemes Sàrl\r\nFerdinand-Hodler street, 13\r\nC/O Sofirege & Associes SA\r\n1207 Geneva\r\nSwitzerland\r\nCommercial register: CH-660.3.280.013-1\r\nContact: Info@parentsolo.ch\r\nPhone: +41 (0)78 695 82 83": "Swissthemes Sàrl\r\nRue Ferdinand-Hodler, 13\r\nC/O Sofirege & Associes SA\r\n1207 Genéve \r\nSuisse\r\nRegistre du commerce : CH660.3.280.013-1\r\nContact: Info@parentsolo.ch\r\nTéléphone: +41 (0)78 695 82 83"
+'XIV - Changes to the General Conditions of Use': 'XIV - Modifications des Conditions Générales d''Utilisation'
+'Parentsolo.ch reserves the right to change without notice and at any time these General Conditions of Use. These changes will not affect current contracts.': 'Parentsolo.ch se réserve le droit de modifier sans préavis et à tout moment les présentes Conditions Générales d''Utilisation. Ces modifications n''auront aucune incidence sur les contrats en cours.'
+'XV - Dispute Resolution': 'XV - Règlement des litiges'
+'Any dispute relating to these General Conditions of Use, even in the event of warranty claims from multiple defendants, would be in default of amicable agreement within the exclusive jurisdiction of the courts of the Republic and Canton of Geneva. CGU provided by FBT Avocats (Lausanne).': 'Tout litige relatif aux présentes Conditions Générales d''Utilisation, même en cas de recours en garantie de pluralité de défendeurs, serait à défaut d''accord amiable de la compétence exclusive des tribunaux de la République et canton de Genève. Conditions générales établies par l''étude FBT Avocats (Lausanne).'
+no.flowers: 'Vous n''avez pas reçu de roses!'
+message: Message
+delete.sub.button: 'Suspendre mon abonnement'
+unsubscribe: Désabonnement
+links.rate: Tarif
+delete.account: 'Vous êtes sur le point d''annuler votre compte sur Parentsolo.ch. Cette action est irréversible et entraine la perte définitive des messages échangés avec les autres membres de Parentsolo.ch, de vos favoris et la suppression de votre profil avec vos photos et votre description. Si vous avez souscrit un abonnement, celui-ci est dû dans son intégralité jusqu''à sa date d''échéance, conformément aux dispositions inscrites dans les conditions générales d''utilisation (CGU) de Parentsolo.ch. L''annulation de votre compte ne sera valable que lorsque vous aurez cliquer sur le lien reçu par Email (si vous ne l''avez pas reçu merci de vérifier dans vos SPAM). Pour faire de nouvelles rencontres sur Parentsolo.ch, vous devrez créer un nouveau compte en réalisant à nouveau la procédure d''inscription.'
+unsubscribe.text: 'Nous avons reçu votre demande de suspension de votre abonnement sur Parentsolo.ch.  La fin de votre abonnement prendra effet à la date d''échéance de celui-ci, conformément aux dispositions inscrites dans les conditions générales d''utilisation (CGU) de Parentsolo.ch. Pour valider définitivement votre demande, nous vous remercions de cliquer sur le lien suivant:'
+is: soit
+accept.cookies: 'Accepter les cookies'
+cookies.text: 'En poursuivant votre navigation sur ce site, vous acceptez l''utilisation des cookies. Nous utilisons des cookies pour vous garantir la meilleure expérience et améliorer la performance de notre site. Pour plus d’informations, consultez nos CGU avec notre politique des cookie.'
+email.message.receive.title: 'Nouveau message reçu'
+text.email.first: 'Vous recevez cette notification suite à votre inscription sur le site Parentsolo.ch. Vous pouvez à tout moment gérer les notifications à recevoir par e-mail en vous connectant sur parentsolo.ch et en accédant aux paramètres de notifications dans les paramètres du compte en suivant'
+text.email.second: 'Ne pas répondre à cet email, cette boîte n’accepte pas les messages entrant. Si vous avez des questions consultez nous vous invitons à consultez les'
+email.message.receive.text: 'Ce membre vous a envoyé 1 message, découvrez-le en vous rendant dans votre espace privé Parentsolo.ch !'
+img.accepted: "Félicitations\_! Votre photo a été validée par nos services et publiée sur Parentsolo.ch. Elle est désormais visible par les membres du site, nous vous souhaitons de belles rencontres sur Parentsolo.ch."
+img.refused: 'Désolé, votre photo n’a pas pu être validée par nos services. Celle-ci ne respecte pas les recommandations et les Conditions Générales d''Utilisation du site Parentsolo.ch. Nous vous invitons à mettre une nouvelle photo.'
+register.title: 'Votre profil a bien été créé'
+register.text: 'Suite à votre inscription sur notre site Parentsolo.ch, votre profil a bien été créé. Notre modératrice vous contactera par téléphone dans un délai de 24 à 48 heures ouvrées pour la vérification de sécurité. Celui-ci sera ensuite activé et visible des autres membres Parentsolo.ch. Dans l''intervalle, nous vous invitons à compléter votre profil pour augmenter vos chances de rencontres et vous familiariser avec le site.'
+flower: Fleur
+favorite: Favoris
+other: Autre
+brand: 'Type de carte'
+amount: Montant
+product: 'Type de produit'
+check.store: 'Vous devez cocher la case "Enregistrer mes données" pour tout abonnement.'
+pattern: 'Votre mot de passe doit contenir 6 caractères au minimum, dont : 1 majuscule, 1 chiffre et 1 caractère spécial (@ , _ , - , & , ! , ? , * , #, etc. )'
+payment.refused: 'Votre paiement a été refusé.'
+reset.title: 'Réinitialisation de votre mot de passe'
+reset.text: 'Pour continuer la procédure de réinitialisation de votre mot de passe, veuillez cliquer sur le bouton ci-dessous.'
+reset.parameter: 'Nous vous invitons à vérifier et compléter vos paramètres de compte et votre profil !'
+parameter: Paramètres
+payment.success: 'Paiement réussi'
+redirect.success.sub: 'Votre paiement est accepté, vous allez être déconnecter afin d''activer votre abonnement.'
+first.connection: 'Nous vous remercions de compléter les informations ci-dessous (les champs marqué d''un * sont obligatoires) et valider en cliquant sur le bouton au bas de la page afin de pouvoir accédez à votre profil.'
+email.exists: 'Cette adresse E-mail existe déjà.'
+'added content': 'Information enregistrée'
+'removed content': 'Information supprimée'
+user.not.found: 'Utilisateur introuvable'
+email.send: 'Un email vient d''être envoyer a l''adresse:'
+password.reset: 'Votre mot de passe a été réinitialisé.'

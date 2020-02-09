@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+{% block title %} Payment {% endblock %}
+{% block javascripts %}{{ parent() }}
+{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col d-flex align-items-center justify-content-center marg-top-50 marg-bottom-20" id="paypal-layer">
+                <script src="https://www.paypal.com/sdk/js?client-id={{ client }}&vault=true"></script>
+                {% if subscribe == false %}
+                    <script>
+                        paypal.Buttons({
+                            createOrder: function(data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: {{ price }}
+                                        }
+                                    }]
+                                });
+                            },
+                            onApprove: function(data, actions) {
+                                return actions.order.capture().then(function(details) {
+                                    if (details.status === 'COMPLETED'){
+                                        fetch('/api/paypal/complete', {
+                                            method: 'post',
+                                            headers: {
+                                                'content-type' : 'application/json'
+                                            },
+                                            body: JSON.stringify({
+                                                details: details,
+                                                item: {{ id }}
+                                            })
+                                        })
+                                            .then(function (res) {
+                                                setTimeout(() => window.location.href = '/dashboard', 2000)
+                                            })
+                                    }
+                                    else {
+                                        alert('Payment failed')
+                                    }
+                                });
+                            }
+                        }).render('#paypal-layer');</script>
+                {% else %}
+                    <script>
+                        paypal.Buttons({
+                            createSubscription: function(data, actions) {
+                                return actions.subscription.create({
+                                    'plan_id': '{{ plan }}'
+                                });
+                            },
+                            onApprove: function(data, actions) {
+                                fetch('/api/paypal/approuve/sub', {
+                                    method: 'POST',
+                                    headers: {'content-type' : 'application/json'},
+                                    body: JSON.stringify({
+                                        'item_id' : {{ id }},
+                                        'plan_id' : '{{ plan }}'
+                                    })
+                                })
+                                    .then(res => {
+                                        res.json().then(data => {
+                                            let decoded = JSON.parse(data);
+                                            window.location.href = decoded.links[0].href
+                                        })
+                                    })
+
+                            }
+                        }).render('#paypal-layer');
+                    </script>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

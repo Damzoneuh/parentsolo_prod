@@ -1,0 +1,5 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}{{ parent() }}{% endblock %}
+{% block javascripts %}{{ parent() }}{{ encore_entry_script_tags('resetemail') }}{% endblock %}
+{% block title %}Reset{% endblock %}
+{% block body %}<div id="reset" data-csrf="{{ csrf_token('register') }}"></div>{% endblock %}

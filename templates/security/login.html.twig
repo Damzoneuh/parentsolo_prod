@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <div class="container-fluid min-80-vh">
+        <div class="w-100 d-flex align-items-center justify-content-around">
+            <div class="diary-wrap">
+                <form method="post" class="marg-20 text-center">
+                    <h1 class="h3 mb-3 font-weight-normal">{{ connection | upper }}</h1>
+                    <div class="marg-10">
+                        <label for="inputEmail" class="sr-only">Email</label>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus >
+                    </div>
+                    <div class="marg-10">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    </div>
+                    <input type="hidden" name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}"
+                    >
+
+                    <div class="text-center marg-20">
+                        <button class="btn btn-lg btn-outline-light" type="submit">
+                            Login
+                        </button>
+                    </div>
+                </form>
+                <div class="col-12 text-center">
+                    <div class="marg-10"><a href="{{ path('user_reset_mail') }}" class="text-white">{{forgot}}</a></div>
+                    <div class="marg-10"><a href="{{ path('index') }}" class="btn btn-group btn-success">{{ register }}</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

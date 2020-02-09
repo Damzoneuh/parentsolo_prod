@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Index{% endblock %}
+{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('register') }} {{ encore_entry_script_tags('viewer') }}{% endblock %}
+{% block stylesheets %}{{ parent() }} {% endblock %}
+
+{% block body %}
+    <div id="register" data-token="{{ csrf_token('register') }}"></div>
+    <div class="container">
+        <div class="row">
+{#            <div class="col-12 w-50 text-center">#}
+{#                <h4>PARENTSOLO.CH :</h4><p> <span class="text-danger font-weight-bold"> {{ introRed }}</span> {{ intro }}</p>#}
+{#            </div>#}
+            <div class="col-lg-6 col-12">
+                <div class="flex flex-row justify-content-around align-items-start marg-top-10">
+                    <div class="w-25">
+                        <img src="{{ asset('/img/Qualite.png') }}" alt="icon" class="w-100">
+                    </div>
+                    <div class="w-75">
+                        <h4>{{ meetingTitle }}</h4>
+                        <p>{{ meetingText }} <span class="text-success">{{ ratio }}</span> <br /><span class="text-danger">{{ meetingRed }}</span> </p>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-content-around align-items-start marg-top-50">
+                    <div class="w-25">
+                        <img src="{{ asset('/img/Securite.png') }}" alt="icon" class="w-100">
+                    </div>
+                    <div class="w-75">
+                        <h4>{{ securityTitle }}</h4>
+                        <p>{{ securityText }} <span class="text-success">{{ securityGreen }}</span> <br /><span class="text-danger">{{ securityRed }}</span> </p>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-content-around align-items-start marg-top-50">
+                    <div class="w-25">
+                        <img src="{{ asset('/img/Interactivite.png') }}" alt="icon" class="w-100">
+                    </div>
+                    <div class="w-75">
+                        <h4>{{ interactiveTitle }}</h4>
+                        <p>{{ interactiveText }} <span class="text-success">{{ interactiveGreen }}</span> <br /><span class="text-danger">{{ interactiveRed }}</span> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                {% if testimony is not null %}
+                    <div class="testimony-wrap">
+                        {% for testi in testimony %}
+                            <div class="flex flex-row justify-content-between">
+                                <div class="w-50 text-left">
+                                    <h4>{{ testimonyLink }}</h4>
+                                    <h5>{{ testi.title }}</h5>
+                                    <span class="font-italic">{{ testi.user.pseudo }}</span>
+                                </div>
+                                <div class="w-50">
+                                    {% if testi.user.img.values is not empty%}
+                                        <div id="viewer" class="text-right" data-path="{{ testi.user.img.values.0.id }}" data-alt="{{ testi.user.img.values.0.title }}" data-class="testimony-img"></div>
+                                    {% else %}
+                                        <div class="text-right"><img src="{{ asset('/img/FavIcon.png') }}" alt="image" class="testimony-img"></div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="marg-top-10">{{ testi.text }}</div>
+                            <div class="text-right">
+                                <a href="{{ path('testimony') }}" class="btn btn-group btn-outline-light marg-top-10">{{ readMore }}</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% if diaryValue is null %}
+                    <div class="diary-wrap">
+                        <div class="flex flex-row justify-content-between marg-10">
+                            <h4>{{ diary }}</h4>
+                            <img src="{{ asset('/img/Agenda.png') }}" alt="diary" class="diary-img">
+                        </div>
+                        {{ diaryDefault }}
+                        <div class="text-right">
+                            <a href="{{ path('diary') }}" class="btn btn-group btn-outline-success marg-top-10">{{ shareEvent }}</a>
+                        </div>
+                    </div>
+                {% else %}
+                <div class="diary-wrap">
+                        {% for diaryVal in diaryValue %}
+                             <div class="flex flex-row justify-content-between">
+                                <div class="w-50 text-left">
+                                    <h4>{{ diary }}</h4>
+                                    <h4>{{ diaryVal.title }}</h4>
+                                    <h4 class="date">{{ diaryVal.date|date('d/m/y') }} - {{ diaryVal.location }}</h4>
+                                </div>
+                                <div class="w-50 text-right">
+                                    {% if diaryVal.img is not null %}
+                                        <img src="{{ path('api_render_img', {id: diaryVal.img.id}) }}" alt="diary event" class="diary-img">
+                                    {% else %}
+                                        <img src="{{ asset('/img/Agenda.png') }}" alt="diary" class="diary-img">
+                                    {% endif %}
+                                </div>
+                             </div>
+                            {{ diaryVal.text }}
+                            <div class="text-right">
+                                <a href="{{ path('diary') }}" class="btn btn-group btn-outline-light marg-top-10">{{ readMore }}</a>
+                            </div>
+                        {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

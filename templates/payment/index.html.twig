@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Payment{% endblock %}
+{% block javascripts %}{{ parent() }}
+{#    {{ encore_entry_script_tags('payment') }}#}
+{% endblock %}
+{% block body %}
+{#    <div id="payment" data-settings="{{ settings|json_encode|format }}" data-token="{{ csrf_token('payment') }}"></div>#}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col d-flex justify-content-around align-items-sm-stretch">
+{#                {{ dump(app.flashes) }}#}
+
+                <div class="border-red rounded-more pad-30 marg-20 marg-bottom-20 text-center w-50">
+                    {{ form_start(form) }}
+                    {{ form_end(form) }}
+                </div>
+                <div class="border-red rounded-more pad-30 marg-20 marg-bottom-20 text-center w-50 d-flex align-items-center justify-content-center">
+                    <a href="{{ path('paypal', {'id': item}) }}" class="btn btn-group btn-primary btn-pad">PayPal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

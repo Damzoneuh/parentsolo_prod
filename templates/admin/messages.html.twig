@@ -1,0 +1,18 @@
+{% extends 'admin/base-admin.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block javascripts %}{{ parent() }}{% endblock %}
+
+{% block body %}{{ parent() }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="rounded-more border-red pad-30 marg-top-10 marg-bottom-10">
+                    <h2>Générer des messages</h2>
+                    {{ form_start(form) }}
+                    {{ form_end(form) }}
+                    <span class="text-info">Pour afficher le pseudo de la cible : @user</span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

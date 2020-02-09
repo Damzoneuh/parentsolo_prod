@@ -1,0 +1,51 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
+    role_hierarchy:
+        ROLE_BASIC: ROLE_USER
+        ROLE_MEDIUM: [ROLE_BASIC, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_PREMIUM: [ROLE_MEDUIM, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_ADMIN: [ROLE_PREMIUM, ROLE_ALLOWED_TO_SWITCH]
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~
+            logout:
+                path: app_logout
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+         - { path: ^/payment, roles: ROLE_USER }
+         - { path: ^/profile, roles: ROLE_USER }
+         - { path: ^/dashboard, roles: ROLE_USER }
+         - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/edit, roles: ROLE_USER }
+         - { path: ^/parameters, roles: ROLE_USER }
+         - { path: ^/group, roles: ROLE_USER }
+         - { path: ^/diary, roles: ROLE_USER }
+         - { path: ^/visit, roles: ROLE_USER }
+         - { path: ^/conversations, roles: ROLE_USER }
+         - { path: ^/unsbsribe, roles: ROLE_USER }
+         - { path: ^/testimony, roles: ROLE_USER }
