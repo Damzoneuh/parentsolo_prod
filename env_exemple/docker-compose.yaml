@@ -1,0 +1,108 @@
+version: '3'
+services:
+        
+  webserver_parentsolo:
+    image: nginx
+    container_name: webserver_parentsolo
+    restart: unless-stopped
+    volumes:
+      - /home/parentsolo_dev:/var/www/html
+      - /home/parentsolo_env/site.conf:/etc/nginx/conf.d/site.conf
+      - /home/parentsolo_env/log/error:/var/log/nginx/project_error.log;
+    labels:
+      - "traefik.docker.network=traefik_default"
+      - "traefik.enable=true"
+      - 'traefik.frontend.rule=Host:Your domain'
+    ports:
+      - "93:80"
+    networks:
+      - traefik
+      - internal
+    environment:
+      DOCKER_HOST: "unix:///tmp/docker.sock"
+    links:
+      - php_parentsolo
+
+  php_parentsolo:
+    restart: always
+    build: ./php
+    container_name: php_parentsolo
+    environment:
+      DOCKER_HOST: "unix:///tmp/docker.sock"
+      MAILER_URL: "smtp://YourSMTPHost?encryption=tls&auth_mode=login&username=user@domain&password=YourPassword"
+    volumes:
+      - /home/parentsolo_env/mail:/usr/local/etc/php/conf.d/mail.ini
+      - /home/parentsolo_dev:/var/www/html
+      - /home/parentsolo_env/php/php.ini:/usr/local/etc/php/php.ini
+      - /home/parentsolo_env/php/www.conf:/etc/php-fpm.d/www.conf
+    networks:
+      - internal
+      - traefik
+    links:
+      - db_parentsolo
+    ports:
+      - "9000:9000"
+
+  composer:
+    image: "composer"
+    volumes:
+      - /home/parentsolo_dev:/app
+    command: bash -c "composer install && composer update"
+    networks:
+      - internal
+
+  db_parentsolo:
+    image: mariadb:10.3.14
+    restart: always
+    volumes:
+      - /home/parentsolo_env/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "YourPassWord"
+      MYSQL_DATABASE: "dbName"
+      MYSQL_USER: "User"
+      MYSQL_PASSWORD: "UserPassWord"
+    ports:
+      - "3311:3306"
+    networks:
+      - internal
+
+  node_parentsolo:
+    build: ./node
+    volumes:
+      - /home/parentsolo_dev:/usr/app/
+    command: bash -c "npm install && npm run watch"
+    # TODO Replace by run build to switch to prod
+    networks:
+      - internal
+
+  node_messaging:
+    build: ./Messaging
+    restart: always
+    command: bash -c "node Messaging.js"
+    volumes:
+      - /home/parentsolo_dev:/usr/app/
+    networks:
+      - traefik
+    environment:
+      DB_HOST: "YourDbHost"
+      DB_PORT: "3311"
+      DB_USER: "YourDbUser"
+      DB_PASS: "YourDbPassWord"
+      DB_DATABASE: "YourDbName"
+      NODE_TOKEN: "YourSecret"
+    ports:
+      - "5000:80"
+
+    labels:
+      - "traefik.docker.network=traefik_default"
+      - "traefik.wss.protocol=http"
+      - "traefik.enable=true"
+      - 'traefik.frontend.rule=Host:ws.yourDomain'
+
+networks:
+  traefik:
+    external:
+      name: traefik_default
+
+  internal:
+    driver: bridge
