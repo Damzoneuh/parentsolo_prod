@@ -41,7 +41,7 @@ export default class TextAreaModal extends Component{
     }
 
     render() {
-        const {flowers, validate} = this.props;
+        const {flowers, validate, title} = this.props;
         const {selectedFlower} = this.state;
         let desc = null;
         return (
@@ -53,6 +53,9 @@ export default class TextAreaModal extends Component{
                 </div>
                 <div className="text-center">
                     <LogoForLang color={'black'} baseline={true} />
+                </div>
+                <div className="text-center">
+                    <h2>{title}</h2>
                 </div>
                 <form className="text-center custom-modal-content" onSubmit={this.handleSend}>
                         <a className="nav-link dropdown-toggle" href="#" id="flowerDropdownMenuLink"

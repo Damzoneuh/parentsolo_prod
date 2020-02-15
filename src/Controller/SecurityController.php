@@ -49,7 +49,7 @@ class SecurityController extends AbstractController
     /**
      * @param null $id
      * @return \Symfony\Component\HttpFoundation\JsonResponse
-     * @Route("api/user/{id}", name="api_get_user", methods={"GET"})
+     * @Route("/api/user/{id}", name="api_get_user", methods={"GET"})
      */
     public function getUserRoles($id = null){
         $data = [];

@@ -551,19 +551,6 @@ class ProfilController extends AbstractController
         return $data;
     }
 
-//    /**
-//     * @Route("/api/test/fav", name="api_test_fav")
-//     */
-//    public function test(){
-//        /** @var User $me */
-//        $me = $this->getUser();
-//        $em = $this->getDoctrine()->getManager();
-//        $jsp = $this->getDoctrine()->getRepository(User::class)->find(2);
-//        $me->getProfil()->addFavorite($jsp);
-//        $em->persist($me);
-//        $em->flush();
-//        return $this->json('ok');
-//    }
 
     /**
      * @param Request $request

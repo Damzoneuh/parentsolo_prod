@@ -103,18 +103,17 @@ export default class UnderNav extends Component{
                                     <FontAwesomeIcon icon={'bars'} color={"rgb(255,255,255)"} className={"marg-10 ham-under"}/>
                                 </a>
                                 <div className="dropdown-menu bg-danger text-white pad-10" aria-labelledby="UnderNavDropdownMenuLink">
-                                    <a className="dropdown-item drop-down-white marg-bottom-10 marg-top-10" href="/" ><h5>{trans['home.link']}</h5></a>
-                                    <a className="dropdown-item drop-down-white marg-bottom-10" href="/edit/profile"><h5>{trans['edit profile']}</h5></a>
+                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className="marg-bottom-10 " href="/edit/profile"><h5>{trans['edit profile']}</h5></a></div>
                                     <div className="text-white nav-title"><h5 className="text-dark">{trans.search}</h5></div>
-                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className="border-bottom-black pad-bottom-10" href="/dashboard" >{trans['profil.search']}</a></div>
-                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className=" border-bottom-black pad-bottom-10" href="/favorite" >{trans['favorite.list']}</a></div>
+                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className=" pad-bottom-10" href="/dashboard" >{trans['profil.search']}</a></div>
+                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className="  pad-bottom-10" href="/favorite" >{trans['favorite.list']}</a></div>
                                     <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className=" pad-bottom-10" href="/dashboard" >Matching</a></div>
                                     <div className="text-white nav-title marg-top-20"><h5 className="text-dark">{trans.groups}</h5></div>
-                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className="border-bottom-black pad-bottom-10" href="/group" >{trans['groups.show.link']}</a></div>
-                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className=" border-bottom-black pad-bottom-10" href="/group/user" >{trans['my.groups']}</a></div>
+                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className=" pad-bottom-10" href="/group" >{trans['groups.show.link']}</a></div>
+                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className="  pad-bottom-10" href="/group/user" >{trans['my.groups']}</a></div>
                                     <div className="text-white nav-title marg-top-20"><h5 className="text-dark">{trans.diary}</h5></div>
-                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className="border-bottom-black pad-bottom-10" href="/diary" >{trans['diary.search']}</a></div>
-                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10 "><a className=" border-bottom-black pad-bottom-10" href="/diary" >{trans['diary.add']}</a></div>
+                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10"><a className=" pad-bottom-10" href="/diary" >{trans['diary.search']}</a></div>
+                                    <div className="dropdown-item drop-down-white marg-top-10 marg-bottom-10 "><a className=" pad-bottom-10" href="/diary" >{trans['diary.add']}</a></div>
                                     <div className="w-100 text-center"> <a href="/shop" className="marg-top-20 btn btn-group btn-outline-light">{trans['sub.and.option']}</a></div>
                                 </div>
                             </li>
@@ -126,9 +125,21 @@ export default class UnderNav extends Component{
                     </div>
                     <div className="w-50">
                         <ul className="navbar-nav flex flex-row justify-content-center align-items-center">
-                            <li className="nav-item border-under-nav"><a href={"/conversations"} className="badged-icons border-ul-under" title={trans["my.conversations"]}><FontAwesomeIcon icon={"comments"} color={"rgb(255, 255, 255)"} /></a></li>
-                            <li className="nav-item border-under-nav"><a href={"/visit"} className="badged-icons border-ul-under" title={trans["my.visits"]}><FontAwesomeIcon icon={"user"} color={"rgb(255, 255, 255)"} /></a></li>
-                            <li className="nav-item"><a href={"/flowers"} className="badged-icons border-ul-under" title={trans['flower.received']}><FontAwesomeIcon icon={"spa"} color={"rgb(255, 255, 255)"} /></a></li>
+                            <li className="nav-item border-under-nav">
+                                <a href={"/conversations"} className="badged-icons border-ul-under" title={trans["my.conversations"]}>
+                                    <FontAwesomeIcon icon={"comments"} color={"rgb(255, 255, 255)"} />
+                                </a>
+                            </li>
+                            <li className="nav-item border-under-nav">
+                                <a href={"/visit"} className="badged-icons border-ul-under" title={trans["my.visits"]}>
+                                    <FontAwesomeIcon icon={"user"} color={"rgb(255, 255, 255)"} />
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a href={"/flowers"} className="badged-icons border-ul-under" title={trans['flower.received']}>
+                                    <FontAwesomeIcon icon={"spa"} color={"rgb(255, 255, 255)"} />
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <a href={"/parameters"} onMouseOver={this.handleOver} onMouseLeave={this.handleLeave} className="position-relative" title={trans['account settings']}>

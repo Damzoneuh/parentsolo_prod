@@ -110,8 +110,9 @@ export default class Nav extends Component{
                             <LogoForLang alt="logo" className={scroll === 0 ? "none" : "nav-logo"} baseline={true} color={"black"} />
                             {!phone ? <div className={toggle ? "text-left" : "d-flex flex-row justify-content-center align-items-center"}>
                                 <ul className="navbar-nav">
-                                   <li className="nav-item"> <a href={connection.path} className="nav-link custom-link font-weight-bold"><FontAwesomeIcon icon="lock-open" color={"rgba(0, 0, 0, 0.5)"} className={"pad-right-10"}/>
-                                       {connection.name}</a></li>
+                                   <li className="nav-item">
+                                       <a href={connection.path} className="nav-link custom-link font-weight-bold d-flex justify-content-between"><FontAwesomeIcon icon="lock-open" color={"rgba(0, 0, 0, 0.5)"} className={"pad-right-10"}/>
+                                           <div className="custom-none" >{connection.name}</div></a></li>
                                 </ul>
                                 <ul className="navbar-nav">
                                     <li className="nav-item dropdown">
@@ -150,12 +151,11 @@ export default class Nav extends Component{
                     {phone ? <div className="d-flex flex-row justify-content-center align-items-center top-marg-nav position-fixed z">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                            <a href={connection.path} className="nav-link custom-link font-weight-bold"><FontAwesomeIcon icon="lock-open" color={"rgba(0, 0, 0, 0.5)"} className={"pad-right-10"}/>
-                                {connection.name}</a></li>
+                            <a href={connection.path} className="nav-link custom-link font-weight-bold d-flex justify-content-between"><FontAwesomeIcon icon="lock-open" color={"rgba(0, 0, 0, 0.5)"} className={"pad-right-10"}/>
+                                <div className="custom-none" >{connection.name}</div></a></li>
                         </ul>
                         <ul className="navbar-nav">
                             <li className="nav-item dropdown">
-                                {/*TODO a la mise en prod passer sur single mes couilles */}
                                 <a className="nav-link dropdown-toggle custom-link" href="#" id="navbarDropdownMenuLink"
                                    role="button" data-toggle="dropdown" aria-haspopup="true"
                                    aria-expanded="false">

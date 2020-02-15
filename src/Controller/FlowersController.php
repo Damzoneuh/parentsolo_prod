@@ -122,7 +122,7 @@ class FlowersController extends AbstractController
      */
     public function getFlowerAccess($id){
         $user = $this->getDoctrine()->getRepository(User::class)->find($id);
-        if (in_array('ROLE_PREMIUM', $user->getRoles())){
+        if (in_array('ROLE_PREMIUM', $user->getRoles()) || in_array('ROLE_ADMIN', $user->getRoles())){
             return $this->json(true);
         }
         if (in_array('ROLE_MEDIUM', $user->getRoles()) || in_array('ROLE_BASIC', $user->getRoles()) && $user->getFlowerNumber() && $user->getFlowerNumber() > 0){

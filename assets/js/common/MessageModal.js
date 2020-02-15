@@ -31,7 +31,7 @@ export default class MessageModal extends Component{
 
 
     render() {
-        const {validate} = this.props;
+        const {validate, title} = this.props;
         return (
             <div className="custom-modal">
                 <div className="d-flex flex-row justify-content-end">
@@ -41,6 +41,9 @@ export default class MessageModal extends Component{
                 </div>
                 <div className="text-center">
                     <LogoForLang color={'black'} baseline={true} />
+                </div>
+                <div className="text-center">
+                    <h2>{title}</h2>
                 </div>
                 <form className="text-center custom-modal-content" onSubmit={this.handleSend}>
                     <textarea className="form-control" name="text" onChange={this.handleChange} id="comment"/>

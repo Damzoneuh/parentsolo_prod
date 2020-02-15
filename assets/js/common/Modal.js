@@ -18,7 +18,7 @@ export default class Modal extends Component{
 
 
     render() {
-        const {text, type, validate, cancel} = this.props;
+        const {text, type, validate, cancel, title} = this.props;
         return (
             <div className="custom-modal">
                 <div className="d-flex flex-row justify-content-end">
@@ -28,6 +28,9 @@ export default class Modal extends Component{
                 </div>
                 <div className="text-center">
                     <LogoForLang color={'black'} baseline={true} />
+                </div>
+                <div className="text-center">
+                    <h2>{title}</h2>
                 </div>
                 <div className="text-center custom-modal-content">{text}</div>
                 <div className="d-flex flex-row justify-content-around align-items-center">

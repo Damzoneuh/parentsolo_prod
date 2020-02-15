@@ -50,7 +50,7 @@ class UserRepository extends ServiceEntityRepository
             ->join('u.profil', 'p')
             ->join('p.description', 'd')
             ->andWhere('d.isValidated =:true')
-            ->setParameter('true', true)
+            ->setParameter('true', false)
             ->getQuery()
             ->getResult();
     }
@@ -75,6 +75,13 @@ class UserRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function getUserFluent($by, $node){
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.'.$by.' LIKE :node')
+            ->setParameter('node', '%' . $node . '%')
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return User[] Returns an array of User objects
     //  */

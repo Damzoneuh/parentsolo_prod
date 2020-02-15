@@ -5,6 +5,51 @@
 {% block body %}{{ parent() }}
 <div class="container-fluid">
     <div class="row">
+        <div class=" col-12">
+            <div class="border-red rounded-more pad-30 marg-top-10">
+                {{ form_start(form) }}
+                <div class="form-row">
+                    <div class="col">
+                        {{ form_label(form.search) }}
+                        {{ form_widget(form.search) }}
+                    </div>
+                    <div class="col">
+                        {{ form_label(form.search_by) }}
+                        {{ form_widget(form.search_by) }}
+                    </div>
+                </div>
+                <div class="form-row marg-top-10">
+                    <div class="col">
+                        {{ form_label(form.is_helvetica) }}
+                        {{ form_widget(form.is_helvetica) }}
+                    </div>
+                    <div class="col">
+                        {{ form_label(form.status) }}
+                        {{ form_widget(form.status) }}
+                    </div>
+                    <div class="col">
+                        {{ form_label(form.sub) }}
+                        {{ form_widget(form.sub) }}
+                    </div>
+                </div>
+                <div class="form-row marg-top-10">
+                    <div class="col">
+                        {{ form_label(form.gender) }}
+                        {{ form_widget(form.gender) }}
+                    </div>
+                    <div class="col">
+                        {{ form_label(form.order) }}
+                        {{ form_widget(form.order) }}
+                    </div>
+                </div>
+                <div class="form-row marg-top-10">
+                    <div class="col">
+                        {{ form_widget(form.submit) }}
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
         <div class="col">
             <table class="table table-striped table-danger marg-top-10 marg-bottom-10">
                 <thead>

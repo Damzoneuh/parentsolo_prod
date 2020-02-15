@@ -12,7 +12,7 @@ class ExceptionListener extends Mailing
     public function onKernelException(ExceptionEvent $event){
         $exception = $event->getException();
         $response = new Response();
-        //$this->sendException($event);
+        $this->sendException($event);
         $response->setContent($exception);
         $event->setResponse($response);
     }

@@ -20,28 +20,17 @@ use App\Entity\Testimony;
 use App\Entity\User;
 use App\Entity\Visit;
 use App\Service\MailingService;
-use Ingenico\Connect\Sdk\Client;
-use Ingenico\Connect\Sdk\CommunicatorConfiguration;
-use Ingenico\Connect\Sdk\DefaultConnection;
-use Ingenico\Connect\Sdk\Domain\Definitions\AmountOfMoney;
-use Ingenico\Connect\Sdk\Domain\Definitions\Card;
-use Ingenico\Connect\Sdk\Domain\Payment\CreatePaymentRequest;
-use Ingenico\Connect\Sdk\Domain\Payment\Definitions\CardPaymentMethodSpecificInput;
-use Ingenico\Connect\Sdk\Domain\Payment\Definitions\ThreeDSecure;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\UrlType;
-use Symfony\Component\HttpClient\HttpClient;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use Ingenico\Connect\Sdk\Communicator;
+use const http\Client\Curl\Versions\CURL;
+
 
 class AdminController extends AbstractController
 {
@@ -258,7 +247,7 @@ class AdminController extends AbstractController
      * @Route("/admin/user/{id}", name="admin_user")
      * @throws \Exception
      */
-    public function getUserProfile(MailingService $mailingService, TranslatorInterface $translator, Request $request,$id){
+    public function getUserProfile(MailingService $mailingService, TranslatorInterface $translator, Request $request, $id){
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository(User::class)->find($id);
         $parameterForm = $this->createFormBuilder()
@@ -517,7 +506,7 @@ class AdminController extends AbstractController
         $user->setIsValidated($validate);
         $em->flush();
 
-        return $this->redirectToRoute('admin_user', ['id' => $id]);
+        return $this->redirectToRoute('admin_call', ['id' => $id, 'validate' => $validate]);
     }
 
     /**
@@ -555,9 +544,111 @@ class AdminController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/admin/users/all", name="admin_users_all")
      */
-    public function getUsers(){
+    public function getUsers(Request $request){
+        $form = $this->createFormBuilder()
+            ->add('search', TextType::class, [
+                'label' => 'Recherche',
+                'required' => false
+            ])
+            ->add('search_by', ChoiceType::class, [
+                'label' => 'Rechercher par',
+                'choices' => [
+                  'Email' => 'email',
+                  'Pseudo' => 'pseudo'
+                ],
+                'required' => false
+            ])
+            ->add('is_helvetica', ChoiceType::class,[
+                'choices' => [
+                    'Oui' => true,
+                    'Non' => false
+                ],
+                'label' => 'Helvetica',
+                'required' => false
+            ])
+            ->add('status', ChoiceType::class, [
+                'choices' => [
+                    'Validé' => true,
+                    'En cours' => null,
+                    'Refusé' => false
+                ],
+                'label' => 'Status',
+                'required' => false
+            ])
+            ->add('sub',ChoiceType::class, [
+                'choices' => [
+                    'Abonné' => true,
+                    'Non Abonné' => false
+                ],
+                'label' => 'Abonnement',
+                'required' => false
+            ])
+            ->add('order', ChoiceType::class, [
+                'choices' => [
+                    'Croissant' => 'ASC',
+                    'Décroissant' => 'DESC'
+                ],
+                'label' => 'Ordre',
+                'required' => false
+            ])
+            ->add('gender', ChoiceType::class, [
+                'choices' => [
+                    'Homme' => true,
+                    'Femme' => false
+                ],
+                'label' => 'Genre',
+                'required' => false
+            ])
+            ->add('submit', SubmitType::class, [
+                'label' => 'Rechercher'
+            ])
+            ->getForm();
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()){
+            $data = $form->getData();
+            if ($data['search_by']){
+                return $this->render('admin/admin-users.html.twig', [
+                    'users' => $this->getDoctrine()->getRepository(User::class)->getUserFluent($data['search_by'] , $data['search']),
+                    'form' => $form->createView()
+                ]);
+            }
+            $query = $this->getDoctrine()->getRepository(User::class)->findBy([], $data['order'] ? ['id' => $data['order']] : null);
+            if (count($query) > 0){
+                /** @var User $user */
+                foreach ($query as $key => $user){
+                    if ($data['status'] !== null){
+                        if ($user->getIsValidated() !== $data['status']){
+                            unset($query[$key]);
+                        }
+                    }
+                    if ($data['gender'] !== null){
+                        if ($user->getProfil()->getIsMan() !== $data['gender']){
+                            unset($query[$key]);
+                        }
+                    }
+                    if ($data['sub'] !== null){
+                        if ($data['sub'] && !$user->getSubscribe()){
+                            unset($query[$key]);
+                        }
+                        if (!$data['sub'] && $user->getSubscribe()){
+                            unset($query[$key]);
+                        }
+                    }
+                    if ($data['is_helvetica'] !== null){
+                        if ($data['is_helvetica'] && !in_array("ROLE_HELVETICA", $user->getRoles())){
+                            unset($query[$key]);
+                        }
+                        if (!$data['is_helvetica'] && in_array("ROLE_HELVETICA", $user->getRoles())){
+                            unset($query[$key]);
+                        }
+                    }
+                }
+            }
+            return $this->render('admin/admin-users.html.twig', ['users' => $query, 'form' => $form->createView()]);
+        }
+
         $users = $this->getDoctrine()->getRepository(User::class)->findAll();
-        return $this->render('admin/admin-users.html.twig', ['users' => $users]);
+        return $this->render('admin/admin-users.html.twig', ['users' => $users, 'form' => $form->createView()]);
     }
 
     /**

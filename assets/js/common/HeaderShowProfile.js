@@ -195,12 +195,13 @@ export default class HeaderShowProfile extends Component {
             return (
                 <div className="banner-search d-flex flex-row justify-content-around align-items-center">
                     {/*{message ? <Logger message={message} type={'success'} /> : '' }*/}
-                    {modalFlower && flowers.length > 0 ? <TextAreaModal handleClose={this.handleClose} handleSend={this.handleSend} flowers={flowers} validate={trans.validate} /> : ""}
-                    {messagesModal ? <MessageModal handleClose={this.handleClose} handleSend={this.handleSend} validate={trans.validate} /> : ''}
+                    {modalFlower && flowers.length > 0 ? <TextAreaModal handleClose={this.handleClose} handleSend={this.handleSend} flowers={flowers} validate={trans.validate} title={trans.flower}/> : ""}
+                    {messagesModal ? <MessageModal handleClose={this.handleClose} handleSend={this.handleSend} validate={trans.validate} title={trans.message}/> : ''}
                     <div className="row marg-0 w-100 align-items-stretch">
                         {modal ? <Modal
                             text={trans['accept.favorite']}
                             type={'alert'}
+                            title={trans.favorite}
                             handleClose={this.handleCloseModal}
                             handleAccept={this.handleAcceptModal}
                             validate={trans.validate}

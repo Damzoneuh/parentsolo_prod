@@ -89,31 +89,31 @@
                         </div>
                         {{ user.createdAt|date('d-m-y') }}
                     </div>
-                    <div class="d-flex justify-content-start align-items-center text-dark">
-                        {% if user.isCalled is null %}
-                            <div class="text-grey marg-right-10">
-                                Appel
-                            </div>
-                            <div class="text-white marg-right-10">
-                                <a href="{{ path('admin_call', {validate: 1, id: user.id}) }}" class="btn btn-group btn-success">Réussi</a>
-                            </div>
-                            <div class="text-white">
-                                <a href="{{ path('admin_call', {validate: 0, id: user.id}) }}" class="btn btn-group btn-danger">Echec</a>
-                            </div>
-                            {% elseif user.isCalled is not null and user.isCalled is even %}
-                            <div class="text-grey">Appel</div>
-                            <div class="text-danger marg-left-10">Refusé</div>
-                                <div class="text-white marg-left-10">
-                                    <a href="{{ path('admin_call', {validate: 1, id: user.id}) }}" class="btn btn-group btn-success">Valider</a>
-                                </div>
-                            {% else %}
-                                <div class="text-grey">Appel</div>
-                                <div class="text-success marg-left-10">Validé</div>
-                                <div class="text-white marg-left-10">
-                                    <a href="{{ path('admin_call', {validate: 0, id: user.id}) }}" class="btn btn-group btn-danger">Echec</a>
-                                </div>
-                        {% endif %}
-                    </div>
+{#                    <div class="d-flex justify-content-start align-items-center text-dark">#}
+{#                        {% if user.isCalled is null %}#}
+{#                            <div class="text-grey marg-right-10">#}
+{#                                Appel#}
+{#                            </div>#}
+{#                            <div class="text-white marg-right-10">#}
+{#                                <a href="{{ path('admin_call', {validate: 1, id: user.id}) }}" class="btn btn-group btn-success">Réussi</a>#}
+{#                            </div>#}
+{#                            <div class="text-white">#}
+{#                                <a href="{{ path('admin_call', {validate: 0, id: user.id}) }}" class="btn btn-group btn-danger">Echec</a>#}
+{#                            </div>#}
+{#                            {% elseif user.isCalled is not null and user.isCalled is even %}#}
+{#                            <div class="text-grey">Appel</div>#}
+{#                            <div class="text-danger marg-left-10">Refusé</div>#}
+{#                                <div class="text-white marg-left-10">#}
+{#                                    <a href="{{ path('admin_call', {validate: 1, id: user.id}) }}" class="btn btn-group btn-success">Valider</a>#}
+{#                                </div>#}
+{#                            {% else %}#}
+{#                                <div class="text-grey">Appel</div>#}
+{#                                <div class="text-success marg-left-10">Validé</div>#}
+{#                                <div class="text-white marg-left-10">#}
+{#                                    <a href="{{ path('admin_call', {validate: 0, id: user.id}) }}" class="btn btn-group btn-danger">Echec</a>#}
+{#                                </div>#}
+{#                        {% endif %}#}
+{#                    </div>#}
                     <div class="d-flex justify-content-start align-items-center text-dark marg-bottom-10">
                         {% if user.isValidated is null %}
                             <a href="{{ path('admin_account_validate', {validate: 1, id: user.id}) }}" class="btn btn-group btn-success marg-left-10">Valider</a>

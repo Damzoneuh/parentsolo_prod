@@ -18,13 +18,16 @@ export default class Chat extends Component {
         };
         axios.get('/api/user/' + el.dataset.user)
             .then(res => {
+                console.log(res.data);
                 if (res.data.isSub){
                     this.setState({
                         isGranted: true,
                     });
                 }
                 else{
-                    window.location.href='/shop'
+                    this.setState({
+                        isGranted: false,
+                    });
                 }
             });
 
@@ -89,7 +92,13 @@ export default class Chat extends Component {
     }
 
     handlePayLoad(payLoad){
-        es.send(payLoad);
+        if (this.state.isGranted){
+            es.send(payLoad);
+        }
+        else {
+            window.location.href='/shop'
+        }
+
     }
 
     render() {

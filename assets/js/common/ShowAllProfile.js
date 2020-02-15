@@ -27,7 +27,9 @@ export default class ShowAllProfile extends Component{
             modalFlower: false,
             flowers: [],
             transAll: null,
-            selected: null
+            selected: null,
+            flowerGranted: false,
+            messageGranted: false
         };
         this.handleFavorite = this.handleFavorite.bind(this);
         this.handleAcceptModal = this.handleAcceptModal.bind(this);
@@ -52,6 +54,35 @@ export default class ShowAllProfile extends Component{
             })
 
         }
+
+        axios.get('/api/flower/access/' + el.dataset.user)
+            .then(res => {
+                console.log(res.data);
+                if (res.data){
+                    this.setState({
+                        flowerGranted: true
+                    })
+                }
+                else {
+                    this.setState({
+                        flowerGranted: false
+                    })
+                }
+            });
+
+        axios.get('/api/user/' + el.dataset.user)
+            .then(res => {
+                if(res.data.isSub){
+                    this.setState({
+                        messageGranted: true
+                    })
+                }
+                else {
+                    this.setState({
+                        messageGranted: false
+                    })
+                }
+            });
 
 
         es.onopen = () => {};
@@ -110,12 +141,17 @@ export default class ShowAllProfile extends Component{
 
     handleSend(value){
         if (value.action === 'flower'){
-            es.send(JSON.stringify({
-                action: 'flower',
-                target: this.state.selected,
-                message: value.text,
-                type: value.id
-            }));
+            if (this.state.flowerGranted){
+                es.send(JSON.stringify({
+                    action: 'flower',
+                    target: this.state.selected,
+                    message: value.text,
+                    type: value.id
+                }));
+            }
+            else {
+                window.location.href='/shop'
+            }
         }
         else {
             messageEs.send(JSON.stringify({
@@ -132,11 +168,17 @@ export default class ShowAllProfile extends Component{
     }
 
     handleMessagesModal(val){
-        this.setState({
-            messagesModal: true,
-            modalFlower: false,
-            selected: val.id
-        })
+        if (this.state.messageGranted){
+            this.setState({
+                messagesModal: true,
+                modalFlower: false,
+                selected: val.id
+            })
+        }
+        else{
+            window.location.href='/shop'
+        }
+
     }
 
     pushProfiles(value){
@@ -208,15 +250,16 @@ export default class ShowAllProfile extends Component{
         if (profiles.length > 0 && transAll){
             return (
                 <div className="container-fluid">
-                    {modalFlower && flowers.length > 0 ? <TextAreaModal handleClose={this.handleClose} handleSend={this.handleSend} flowers={flowers} validate={trans.validate} /> : ""}
-                    {messagesModal ? <MessageModal handleClose={this.handleClose} handleSend={this.handleSend} validate={trans.validate} /> : ''}
+                    {modalFlower && flowers.length > 0 ? <TextAreaModal handleClose={this.handleClose} handleSend={this.handleSend} flowers={flowers} validate={trans.validate} title={transAll.flower}/> : ""}
+                    {messagesModal ? <MessageModal handleClose={this.handleClose} handleSend={this.handleSend} validate={trans.validate} title={transAll.message}/> : ''}
                     <div className={!modal ? 'none' : ''}>
                         <Modal
                         text={trans.acceptFavorite}
                         type={'alert'}
+                        title={transAll.favorite}
                         handleClose={this.handleCloseModal}
                         handleAccept={this.handleAcceptModal}
-                        validate={trans.accept}
+                        validate={trans.validate}
                         cancel={trans.cancel}
                         />
                     </div>

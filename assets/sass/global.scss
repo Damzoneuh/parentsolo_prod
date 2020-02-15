@@ -372,6 +372,10 @@ footer{
     flex-wrap: wrap;
   }
 
+  .custom-none{
+    display: none;
+  }
+
   .know-card{
     width: 100%;
   }
@@ -432,6 +436,10 @@ footer{
     display: inline-block;
   }
 
+  .custom-none{
+    display: block;
+  }
+
   .img-bubble{
     margin: 0;
     padding: 0.5em;
@@ -465,6 +473,10 @@ footer{
     margin-right: -15px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .custom-none{
+    display: block;
   }
 
   .credits{
@@ -709,6 +721,7 @@ footer{
 
 .nav-title{
   padding: 0.25rem 1.5rem;
+  border-bottom: 1px solid black;
 }
 
 .dropdown-parameters{
