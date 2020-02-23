@@ -129,9 +129,12 @@ class ProfilController extends AbstractController
             $imgs = $user->getImg()->getValues();
             /** @var Img $img */
             foreach ($imgs as $img){
-                if ($img->getIsProfile()){
+                if ($img->getIsProfile() && $img->getIsValidated()){
                     $data['img'] = $img->getId();
                 }
+            }
+            if (!isset($data['img'])){
+                $data['img'] = null;
             }
         }
         else{
@@ -365,10 +368,15 @@ class ProfilController extends AbstractController
         else{
             /** @var Img $img */
             foreach ($imgs->getValues() as $img){
-                array_push($data['img'], [
-                    'img' => $img->getId(),
-                    'isProfile' => $img->getIsProfile()
-                ]);
+                if ($img->getIsValidated()){
+                    array_push($data['img'], [
+                        'img' => $img->getId(),
+                        'isProfile' => $img->getIsProfile()
+                    ]);
+                }
+            }
+            if (!isset($data['img'])){
+                $data['img'] = null;
             }
         }
 

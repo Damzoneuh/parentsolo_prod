@@ -81,7 +81,7 @@ export default class Flower extends Component{
                    <UnderNav data={'flower'}/>
                    <div className="container">
                        <div className="row">
-                           <div className="col">
+                           <div className="col text-center marg-bottom-10 marg-top-20">
                                 <h1>{trans['no.flowers']}</h1>
                            </div>
                        </div>

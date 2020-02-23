@@ -1,0 +1,33 @@
+{% extends 'admin/base-admin.html.twig' %}
+{% block javascripts %}{{ parent() }}{% endblock %}
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block body %}{{ parent() }}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="border-red rounded-more marg-top-10 marg-bottom-20">
+                <div class="pad-30">
+                    {% for message in messages %}
+                        {% if message.from == helvetica %}
+                            <div class="d-flex flex-row justify-content-start">
+                                <div class="red-rounded">
+                                    {{ message.content }}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="d-flex flex-row justify-content-end">
+                                <div class="pink-rounded">
+                                    {{ message.content }}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    {{ form_start(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -248,7 +248,7 @@ export default class HeaderShowProfile extends Component {
                                                         <div className="position-relative marg-top-10">
                                                             <ImageRenderer id={img.img} alt={"profile image"} className={"header-profile-img w-100 marg-0"}/>
                                                             <div className="position-absolute header-absolute" data-toggle="modal"
-                                                                 data-target=".bd-profile-modal-lg"> + {profile.img.length - 3}</div>
+                                                                 data-target=".bd-profile-modal-lg"> <a href="#" className="nav-link text-white">+ {profile.img.length - 3}</a></div>
                                                             <ImgModal img={profile.img} dataTarget={"bd-profile-modal-lg"}/>
                                                         </div>
                                                     )

@@ -141,7 +141,7 @@ export default class ChatBox extends Component{
                             </div>
                             <div className="marg-10">
                                 <a onClick={this.handleRead}><FontAwesomeIcon icon={faSortUp} className={minimize ? "up" : "down"} color={"rgb(0,0,0)"} /></a>
-                                <a className="marg-left-10" onClick={this.handleClose}><FontAwesomeIcon icon={faTimes} color={"rgb(0,0,0)"} /> </a>
+                                <a className="marg-left-10 pad-10" href="#" onClick={this.handleClose}><FontAwesomeIcon icon={faTimes} color={"rgb(0,0,0)"} /> </a>
                             </div>
                         </div>
                     </div>

@@ -45,4 +45,13 @@ class NewsController extends AbstractController
         }
         return $this->json($data, 200);
     }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/news", name="news")
+     */
+    public function news(){
+        $news = $this->getDoctrine()->getRepository(News::class)->findBy(['isActive' => true], ['id' => 'DESC']);
+        return $this->render('news/news.html.twig', ['news' => $news]);
+    }
 }

@@ -4,27 +4,32 @@
 
 {% block body %}{{ parent() }}
     <div class="container-fluid">
-        <div class="row">
+        <div class="row marg-top-10 marg-bottom-10">
             <div class="col">
-                <div class="text-center m-auto"><h2 class="marg-top-10">Actualités</h2></div>
-                {{ form_start(newsForm) }}
-                <div class="row">
-                    <div class="col">
-                        <div class="pad-30">
-                            {{ form_label(newsForm.title) }}
-                            {{ form_widget(newsForm.title) }}
+                <div class="rounded-more border-red">
+                    <div class="text-center m-auto"><h2 class="marg-top-10">Actualités</h2></div>
+                    {{ form_start(newsForm) }}
+                    <div class="row">
+                        <div class="col">
+                            <div class="pad-30">
+                                {{ form_label(newsForm.title) }}
+                                {{ form_widget(newsForm.title) }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="pad-30">
+                                {{ form_label(newsForm.text) }}
+                                {{ form_widget(newsForm.text) }}
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="pad-30">
-                            {{ form_widget(newsForm.text) }}
-                        </div>
+                    <div class="text-center marg-bottom-10">
+                        {{ form_widget(newsForm.submit) }}
                     </div>
+                    {{ form_end(newsForm) }}
                 </div>
-                <div class="m-auto text-center">
-                    {{ form_widget(newsForm.submit) }}
-                </div>
-                {{ form_end(newsForm) }}
+            </div>
+            <div class="col">
                 <table class="table table-striped table-danger marg-top-10 marg-bottom-10">
                     <tbody>
                        {% if news|length > 0 %}

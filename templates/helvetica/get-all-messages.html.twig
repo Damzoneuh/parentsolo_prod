@@ -1,0 +1,26 @@
+{% extends 'admin/base-admin.html.twig' %}
+{% block javascripts %}{{ parent() }}{% endblock %}
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block body %}{{ parent() }}
+<div class="container-fluid">
+    <div class="row">
+    {% if messages|length > 0 %}
+        {% for message in messages %}
+            <div class="col">
+                <div class="border-red rounded-more marg-bottom-10 marg-top-10">
+                    <div class="d-flex justify-content-around marg-bottom-10 marg-top-10">
+                        <div class="m-auto">
+                            Message de : {{ message.user.pseudo }}
+                        </div>
+                        <div class="m-auto">
+                            <a class="btn btn-info btn-group" href="{{ path('admin_reply', {target: message.user.id, helvetica: message.helvetica.id}) }}">Répondre</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

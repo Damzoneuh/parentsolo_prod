@@ -16,17 +16,11 @@ export default class Chat extends Component {
             isGranted: false,
             user: el.dataset.user
         };
-        axios.get('/api/user/' + el.dataset.user)
+        axios.get('/api/user')
             .then(res => {
-                console.log(res.data);
                 if (res.data.isSub){
                     this.setState({
                         isGranted: true,
-                    });
-                }
-                else{
-                    this.setState({
-                        isGranted: false,
                     });
                 }
             });
@@ -92,13 +86,7 @@ export default class Chat extends Component {
     }
 
     handlePayLoad(payLoad){
-        if (this.state.isGranted){
-            es.send(payLoad);
-        }
-        else {
-            window.location.href='/shop'
-        }
-
+        es.send(payLoad);
     }
 
     render() {
@@ -106,12 +94,16 @@ export default class Chat extends Component {
 
         if (isGranted && Object.entries(content).length > 0){
             return (
-                <div className="d-flex flex-row justify-content-around align-items-end position-fixed bottom-0 w-100 chat-wrap flex-wrap">
+                <div className="d-flex flex-row justify-content-around align-items-end position-fixed bottom-0 w-100 chat-wrap">
                     {Object.entries(content).map(message => {
-                        if (!message[1][0].is_close){
-                            return (
-                                <ChatBox messages={message[1]} from={message[0]} handlePayLoad={this.handlePayLoad}/>
-                            )
+                        let closed = false;
+                       message[1].map(m => {
+                           if (m.message_from === user && m.is_close){
+                               closed = true;
+                           }
+                       });
+                        if (!closed){
+                            return <ChatBox messages={message[1]} from={message[0]} handlePayLoad={this.handlePayLoad}/>
                         }
                     })}
                 </div>

@@ -33,32 +33,27 @@ class MessagesRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-    // /**
-    //  * @return Messages[] Returns an array of Messages objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
+    public function findInnerMessages($id){
         return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
-            ->setParameter('val', $value)
+            ->andWhere('m.messageTo = :id')
+            ->andWhere('m.isRead = :false')
+            ->setParameter('id', $id)
+            ->setParameter('false', false)
             ->orderBy('m.id', 'ASC')
-            ->setMaxResults(10)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Messages
-    {
+    public function getConversation($user, $target){
         return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
-            ->setParameter('val', $value)
+            ->andWhere('m.messageFrom = :user OR m.messageTo = :user')
+            ->andWhere('m.messageTo = :target OR m.messageFrom = :target')
+            ->orderBy('m.id', 'ASC')
+            ->setParameter('user', $user)
+            ->setParameter('target', $target)
             ->getQuery()
-            ->getOneOrNullResult()
-        ;
+            ->getResult();
+
     }
-    */
+
 }

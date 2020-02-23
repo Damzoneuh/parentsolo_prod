@@ -81,13 +81,13 @@ export default class Shop extends Component{
                             </div>
 
                             <div className="border-red rounded-more pad-30 text-center col-md-6 col-sm-12 marg-top-10 marg-bottom-20">
-                                <h1>{trans.other}</h1>
+                                <h1>* {trans.options}</h1>
                                 <form onChange={this.handleChange} onSubmit={this.handleShop} className="d-flex flex-row justify-content-between" id="notsub">
                                     <select>
                                         {items.map(item => {
                                             if (!item.isSubscribe){
                                                 return(
-                                                    <option selected={item.id === 1} value={item.id}>{item.quantity} {trans[item.type]}</option>
+                                                    <option selected={item.id === 1} value={item.id}>{item.quantity} {trans[item.type]} CHF {item.price}</option>
                                                 )
                                             }
                                         })}

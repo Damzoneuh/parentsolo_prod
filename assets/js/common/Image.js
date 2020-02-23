@@ -128,7 +128,7 @@ export default class Image extends Component{
                                 </div>
                             </div>
                         </div>
-                        <div className="form-group ">
+                        <div className="form-group d-flex justify-content-between marg-left-10">
                             <label htmlFor="isProfile" className="form-check-label">{trans['is.profile']}</label>
                             <input id="isProfile" type="checkbox" name="isProfile" className="form-check-input" defaultChecked={false}/>
                         </div>

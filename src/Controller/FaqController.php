@@ -101,6 +101,81 @@ class FaqController extends AbstractController
 
     /**
      * @param $id
+     * @param Request $request
+     * @param TranslatorInterface $translator
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Route("/admin/faq/{id}", name="admin_edit_faq")
+     */
+    public function editFaq($id, Request $request, TranslatorInterface $translator){
+        $faq = $this->getDoctrine()->getRepository(Faq::class)->find($id);
+        $form = $this->createFormBuilder()
+            ->add('title_fr', TextType::class, [
+                'data' => $translator->trans($faq->getTitle(), [], null, 'fr')
+            ])
+            ->add('title_en', TextType::class,[
+                'data' => $translator->trans($faq->getTitle(), [], null, 'en')
+            ])
+            ->add('title_de', TextType::class,[
+                'data' => $translator->trans($faq->getTitle(), [], null, 'de')
+            ])
+            ->add('text_fr', TextareaType::class,[
+                'data' => $translator->trans($faq->getText(), [], null, 'fr')
+            ])
+            ->add('text_en', TextareaType::class,[
+                'data' => $translator->trans($faq->getText(), [], null, 'en')
+            ])
+            ->add('text_de', TextareaType::class,[
+                'data' => $translator->trans($faq->getText(), [], null, 'de')
+            ])
+            ->add('submit', SubmitType::class, [
+                'label' => 'Enregistrer'
+            ])
+            ->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $fr = Yaml::parseFile($this->getParameter('fr.trans.file'));
+            $de = Yaml::parseFile($this->getParameter('de.trans.file'));
+            $en = Yaml::parseFile($this->getParameter('en.trans.file'));
+
+            $data = $form->getData();
+            $em = $this->getDoctrine()->getManager();
+
+            unset($en[$data['title_en']]);
+            unset($en[$data['text_en']]);
+            unset($fr[$data['title_en']]);
+            unset($fr[$data['title_en']]);
+            unset($fr[$data['text_en']]);
+            unset($de[$data['title_en']]);
+            unset($de[$data['text_en']]);
+
+            $en[$data['title_en']] = $data['title_en'];
+            $en[$data['text_en']] = $data['text_en'];
+            $fr[$data['title_en']] = $data['title_fr'];
+            $fr[$data['text_en']] = $data['text_fr'];
+            $de[$data['title_en']] = $data['title_de'];
+            $de[$data['text_en']] = $data['text_de'];
+
+            $dumpFr = Yaml::dump($fr);
+            $dumpDe = Yaml::dump($de);
+            $dumpEn = Yaml::dump($en);
+
+            file_put_contents($this->getParameter('en.trans.file'), $dumpEn);
+            file_put_contents($this->getParameter('fr.trans.file'), $dumpFr);
+            file_put_contents($this->getParameter('de.trans.file'), $dumpDe);
+
+            $faq->setTitle($data['title_en']);
+            $faq->setText($data['text_en']);
+            $em->persist($faq);
+            $em->flush();
+            $this->addFlash('success', 'FAQ modifiée');
+            return $this->redirectToRoute('admin_faq');
+        }
+        return $this->render('faq/edit-faq.html.twig', ['form' => $form->createView()]);
+    }
+
+    /**
+     * @param $id
      * @Route("/admin/faq/delete/{id}", name="admin_delete_faq")
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */

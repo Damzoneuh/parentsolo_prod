@@ -15,44 +15,6 @@ let connection = mysql.createConnection({
     port: process.env.DB_PORT
 });
 
-// let conn = mysql.createConnection({
-//     host: 'parentsolo.disons-demain.be',
-//     user: 'damien',
-//     password: 'Platine74',
-//     database: 'parentsolo',
-//     port: 3311
-// });
-//
-// conn.connect();
-// conn.query('select id, titre, texte, user_id from groupe where active=1', (err, rows, fields) => {
-//         if (rows){
-//             let map = [];
-//             for (let i = 0; i > rows.length; i++){
-//                 setTimeout(() => post(rows[i]), 2000)
-//             }
-//             const push = (row) => {
-//                 map.push(row)
-//             };
-//             const fetch = rows.map((row, key) => {
-//                 if (key => 0 && key < 1 ){
-//                     return new Promise(resolve => {
-//                         resolve(push(row))
-//                     })
-//                 }
-//             });
-//             Promise.all(fetch).then(axios.post('https://parentsolo.disons-demain.be/transfer/test',map).then(res => {console.log(res.data)}).catch(e => console.log(e)))
-//         }
-//     // PSPID : votre PSPID
-//     // USERID : l’utilisateur API
-//     // PSWD : le mot de passe de l’utilisateur API.
-// });
-
-// const wss = new WS.Server({noServer: true});
-// wss.on('connection', function connection(req) {
-//     console.log(req)
-// });
-//
-
 
 connection.connect();
 const app = express();
@@ -89,12 +51,9 @@ wss.on('connection', (ws, req) => {
             }
         });
 
-
-
         if (auth){
             ws.on('message', (message) => {
                 message = JSON.parse(message);
-
                 if (message.action === 'send') {
                     connection.query('INSERT INTO messages (message_from, message_to, content, is_read) VALUES (' + ws.id + ', ' + message.target + ', "' + encodeURI(message.message) + '", false)');
                     connection.query('UPDATE messages SET is_close=null WHERE message_from=' + ws.id + ' AND message_to=' + message.target + ' OR message_from=' + message.target + ' AND message_to=' + ws.id);

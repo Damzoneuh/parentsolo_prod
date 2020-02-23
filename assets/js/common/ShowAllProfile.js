@@ -10,6 +10,7 @@ import {faHeart, faComments, faSpa, faUser} from "@fortawesome/free-solid-svg-ic
 import ProfilShow from "./ProfilShow";
 import TextAreaModal from "./TextAreaModal";
 import MessageModal from "./MessageModal";
+import Pagination from "./Pagination";
 library.add(faHeart, faComments, faUser, faSpa);
 let el = document.getElementById('chat');
 const es = new WebSocket('wss://ws.parentsolo.disons-demain.be/f/' + el.dataset.user);
@@ -29,7 +30,8 @@ export default class ShowAllProfile extends Component{
             transAll: null,
             selected: null,
             flowerGranted: false,
-            messageGranted: false
+            messageGranted: false,
+            displayed: null
         };
         this.handleFavorite = this.handleFavorite.bind(this);
         this.handleAcceptModal = this.handleAcceptModal.bind(this);
@@ -40,6 +42,7 @@ export default class ShowAllProfile extends Component{
         this.handleMessagesModal = this.handleMessagesModal.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.handleSend = this.handleSend.bind(this);
+        this.handleDisplayed = this.handleDisplayed.bind(this);
     }
 
     componentDidMount(){
@@ -57,7 +60,6 @@ export default class ShowAllProfile extends Component{
 
         axios.get('/api/flower/access/' + el.dataset.user)
             .then(res => {
-                console.log(res.data);
                 if (res.data){
                     this.setState({
                         flowerGranted: true
@@ -245,8 +247,15 @@ export default class ShowAllProfile extends Component{
         })
     }
 
+    handleDisplayed(data){
+        this.setState({
+            displayed: data
+        });
+        console.log(data)
+    }
+
     render() {
-        const {profiles, modal, trans, modalFlower, messagesModal, flowers, transAll} = this.state;
+        const {profiles, modal, trans, modalFlower, messagesModal, flowers, transAll, displayed} = this.state;
         if (profiles.length > 0 && transAll){
             return (
                 <div className="container-fluid">
@@ -264,7 +273,41 @@ export default class ShowAllProfile extends Component{
                         />
                     </div>
                     <div className="row">
-                        {profiles.map(profile => {
+                        {displayed ? displayed.map(p => {
+                            if (p){
+                                return (
+                                    <div className="col-lg-3 col-md-4 col-sm-12" key={p.id}>
+                                        <div className="text-center rounded-more bg-light marg-10 pad-10">
+                                            <div className="profile-all-wrap">
+                                                {p.img && p.img.length > 0 ? p.img.map(img => {
+                                                    if (img.isProfile){
+                                                        return (
+                                                            <ImageRenderer id={img.img} className={"thumb-profile-img rounded-more"} alt={"profile image"}/>
+                                                        )
+                                                    }
+                                                }) : ''}
+                                                {!p.img && p.isMan ? <img src={defaultMan} alt={"profile image"} className={"thumb-profile-img"}/> : ''}
+                                                {!p.img && !p.isMan ? <img src={defaultWoman} alt={"profile image"} className={"thumb-profile-img"}/> : ''}
+                                            </div>
+                                            <h4 className="font-weight-bold">{p.pseudo.toUpperCase()}</h4>
+                                            {p.age} | {p.city} - {p.canton}
+                                            <div className="d-flex flex-row align-items-center justify-content-around marg-20">
+
+                                                <button className="btn btn-outline-danger btn-lg btn-group-lg" onClick={() => this.handleSelectedProfile(p.id)}>{this.props.trans.view}</button>
+
+                                                <a onClick={() => this.handleFavorite(p)} title={transAll['favorite.add']}>
+                                                    <FontAwesomeIcon icon={'heart'} color={p.isFavorite ? 'rgba(255,0,0,0.8)' : 'rgba(0,0,0,0.3)'} className={'font-size-30'}/>
+                                                </a>
+                                                <a onClick={() => this.handleToggleFlowerModal(p)} title={transAll['flower.send']}><FontAwesomeIcon icon={'spa'} color={'rgba(0,0,0,0.3)'} className={'font-size-30'}/></a>
+                                                <a onClick={() => this.handleMessagesModal(p)} title={transAll['message.send']}><FontAwesomeIcon icon={'comments'} color={'rgba(0,0,0,0.3)'} className={'font-size-30'}/></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        }) :
+                        profiles.map(profile => {
+
                             return (
                                 <div className="col-lg-3 col-md-4 col-sm-12" key={profile.id}>
                                     <div className="text-center rounded-more bg-light marg-10 pad-10">
@@ -295,6 +338,9 @@ export default class ShowAllProfile extends Component{
                                 </div>
                             )
                         })}
+                        <div className="col-12">
+                            <Pagination data={profiles} handleDisplay={this.handleDisplayed} itemsPerPage={20} trans={transAll}/>
+                        </div>
                     </div>
                 </div>
             );

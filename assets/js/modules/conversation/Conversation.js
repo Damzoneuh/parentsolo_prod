@@ -41,7 +41,7 @@ export default class Conversation extends Component{
 
         messageEs.onmessage = message => {
             this.setState({
-                message: JSON.parse(message.data)
+                messages: JSON.parse(message.data)
             })
         };
         axios.get('/api/conversation')
@@ -53,7 +53,7 @@ export default class Conversation extends Component{
                    axios.get('/api/profile/' + user[0])
                        .then(res => {
                            let profiles = this.state.profiles;
-                           profiles.push(res.data);
+                           profiles[res.data.id] = res.data;
                            this.setState({
                                profiles: profiles
                            });
@@ -124,7 +124,6 @@ export default class Conversation extends Component{
                     <div className="container">
                         <div className="row align-items-stretch ">
                             {messages.map(message => {
-                                console.log(profiles);
                                 let messageIndex = message[0];
                                 if (typeof profiles[messageIndex] !== 'undefined'){
                                     return (
@@ -153,7 +152,6 @@ export default class Conversation extends Component{
                                                 </div>
                                                 <div className={show && show === message[0] ? "bg-light marg-top-10 pad-10" : "none"}>
                                                     {message[1].map(m => {
-                                                        //console.log(m, el.dataset.user);
                                                         if (m.from === parseInt(el.dataset.user)){
                                                             return(
                                                                 <div className="d-flex justify-content-end align-items-center">
@@ -184,11 +182,23 @@ export default class Conversation extends Component{
                 </div>
             );
         }
-        else {
+        if(messages && trans && messages.length === 0) {
             return (
                 <div>
-                    {trans ? trans['no message'] : ''}
+                    <UnderNav data={'flower'}/>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col text-center marg-bottom-10 marg-top-20">
+                                <h1>{trans['no message']}</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            )
+        }
+        else {
+            return (
+                <div> </div>
             )
         }
     }

@@ -29,6 +29,7 @@
                             <div class="d-flex align-items-center justify-content-around marg-bottom-20 shadow pad-10">
                                 <div>{{ cgu.title }}</div>
                                 <a class="btn btn-group btn-outline-danger" href="{{ path('admin_delete_cgu', {id: cgu.id}) }}">Supprimer</a>
+                                <a href="{{ path('admin_edit_cgu', {id: cgu.id}) }}" class="btn btn-group btn-outline-secondary">Editer</a>
                             </div>
                         </div>
                     {% endfor %}

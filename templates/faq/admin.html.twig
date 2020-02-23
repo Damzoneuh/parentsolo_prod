@@ -1,10 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base-admin.html.twig' %}
 
 {% block title %}{{ parent() }} Admin faqs{% endblock %}
 
 {% block javascripts %}{{ parent() }}{% endblock %}
 
-{% block body %}
+{% block body %}{{ parent() }}
     <div class="container-fluid">
         <div class="w-100 text-center text-grey"><h1>FAQ</h1></div>
         {% for message in app.flashes('success') %}
@@ -29,6 +29,7 @@
                             <div class="d-flex align-items-center justify-content-around marg-bottom-20 shadow pad-10">
                                 <div>{{ faq.title }}</div>
                                 <a class="btn btn-group btn-outline-danger" href="{{ path('admin_delete_faq', {id: faq.id}) }}">Supprimer</a>
+                                <a class="btn btn-group btn-outline-secondary" href="{{ path('admin_edit_faq', {id: faq.id}) }}">Editer</a>
                             </div>
                         </div>
                     {% endfor %}

@@ -29,7 +29,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use const http\Client\Curl\Versions\CURL;
+
 
 
 class AdminController extends AbstractController
@@ -730,6 +730,7 @@ class AdminController extends AbstractController
             $new->setText($data['text']);
             $new->setTitle($data['title']);
             $new->setIsActive(false);
+            $em->persist($new);
             $em->flush();
 
             return $this->redirectToRoute('admin_news');
@@ -1256,60 +1257,5 @@ class AdminController extends AbstractController
             'visits' => $visits
         ]);
     }
-
-//    /**
-//     * @param MailingService $mailingService
-//     * @param TranslatorInterface $translator
-//     * @return \Symfony\Component\HttpFoundation\Response
-//     * @Route("/email", name="admin_email")
-//     */
-//    public function seeMail(MailingService $mailingService, TranslatorInterface $translator){
-//        $em = $this->getDoctrine()->getConnection();
-//        $sql = 'insert into parentsolo.canton (id, name, code) values (2, \'Vaud\', 1);
-//insert into parentsolo.canton (id, name, code) values (3, \'Genève\', 2);
-//insert into parentsolo.canton (id, name, code) values (4, \'Neuchâtel\', 3);
-//insert into parentsolo.canton (id, name, code) values (5, \'Fribourg\', 4);
-//insert into parentsolo.canton (id, name, code) values (6, \'Jura\', 5);
-//insert into parentsolo.canton (id, name, code) values (7, \'Valais\', 6);
-//insert into parentsolo.canton (id, name, code) values (8, \'Tessin\', 7);
-//insert into parentsolo.canton (id, name, code) values (9, \'Grisons\', 8);
-//insert into parentsolo.canton (id, name, code) values (10, \'Berne\', 9);
-//insert into parentsolo.canton (id, name, code) values (11, \'Appenzell Rhodes-Extérieures\', 10);
-//insert into parentsolo.canton (id, name, code) values (12, \'Appenzell Rhodes-Intérieures\', 11);
-//insert into parentsolo.canton (id, name, code) values (13, \'Argovie\', 12);
-//insert into parentsolo.canton (id, name, code) values (14, \'Bâle-Campagne\', 13);
-//insert into parentsolo.canton (id, name, code) values (15, \'Bâle-Ville\', 14);
-//insert into parentsolo.canton (id, name, code) values (16, \'Glaris\', 15);
-//insert into parentsolo.canton (id, name, code) values (17, \'Lucerne\', 16);
-//insert into parentsolo.canton (id, name, code) values (18, \'Nidwald\', 17);
-//insert into parentsolo.canton (id, name, code) values (19, \'Obwald\', 18);
-//insert into parentsolo.canton (id, name, code) values (20, \'Saint-Gall\', 19);
-//insert into parentsolo.canton (id, name, code) values (21, \'Schaffhouse\', 20);
-//insert into parentsolo.canton (id, name, code) values (22, \'Schwytz\', 21);
-//insert into parentsolo.canton (id, name, code) values (23, \'Soleure\', 22);
-//insert into parentsolo.canton (id, name, code) values (24, \'Thurgovie\', 23);
-//insert into parentsolo.canton (id, name, code) values (25, \'Uri\', 24);
-//insert into parentsolo.canton (id, name, code) values (26, \'Zoug\', 25);
-//insert into parentsolo.canton (id, name, code) values (27, \'Zurich\', 26);';
-//        $stmt = $em->prepare($sql);
-//        $stmt->execute([]);
-  //      $token = 'kjfedhsikfjbhkswjdfbksjbf';
-//        /** @var User $user */
-//        $user = $this->getUser();
-//        return $this->render('email/register.html.twig',[
-//            'user' => $user,
-//            'validate' => $translator->trans('validate', [], null, strtolower($user->getLangForModeration())),
-//            'content' => $translator->trans('register.text', [], null, strtolower($user->getLangForModeration())),
-//            'token' => $token,
-//            'title' => $translator->trans('register.title', [], null, strtolower($user->getLangForModeration())),
-//            'links' => [
-//                'testimony' => $translator->trans('testimony.link', [], null, strtolower($user->getLangForModeration())),
-//                'diary' => $translator->trans('diary', [], null, strtolower($user->getLangForModeration())),
-//                'first' => $translator->trans('text.email.first', [], null, strtolower($user->getLangForModeration())),
-//                'second' => $translator->trans('text.email.second', [], null, strtolower($user->getLangForModeration()))
-//            ]
-//        ]);
-//        return $this->json($stmt->fetchAll());
-//    }
 
 }

@@ -114,7 +114,7 @@ class ParametersController extends AbstractController
         if ($accountSettingsForm->isSubmitted() && $accountSettingsForm->isValid()){
             $em = $this->getDoctrine()->getManager();
             $data = $accountSettingsForm->getData();
-            $user->getProfil()->setIsMan($data['gender']);
+//            $user->getProfil()->setIsMan($data['gender']);
             $em->persist($user);
             $user->setName($data['name']);
             $user->setFirstName($data['firstname']);

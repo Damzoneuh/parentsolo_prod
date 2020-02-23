@@ -6,12 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="{{ asset('/img/FavIcon.png') }}" type="image/png"/>
         {% block stylesheets %}{{ encore_entry_link_tags('global') }}{% endblock %}
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+        <script>
+            window.googletag = window.googletag || {cmd: []};
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/21864984636/PSMR01', [300, 250], 'div-gpt-ad-1571670322825-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+        </script>
     </head>
     <body>
     <div id="nav"></div>
         {% block body %}{% endblock %}
     {% if is_granted('ROLE_BASIC') or is_granted('ROLE_MEDIUM') or is_granted('ROLE_PREMIUM')%}
-        <div id="chat" data-user="{{ app.user.id }}"></div>
         <div id="toasts" data-user="{{ app.user.id }}"></div>
     {% endif %}
     {% if app.user is not null %}

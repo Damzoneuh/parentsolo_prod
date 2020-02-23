@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} News{% endblock %}
+{% block javascripts %}{{ parent() }}{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row align-items-stretch">
+            {% if news|length > 0 %}
+                {% for new in news %}
+                    <div class="col-6">
+                        <div class="rounded-more border-red marg-top-10 marg-bottom-10">
+                            <div class="text-center pad-30">
+                                <h1>{{ new.title }}</h1>
+                            </div>
+                            <div class="text-left pad-30">
+                                <p>{{ new.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
