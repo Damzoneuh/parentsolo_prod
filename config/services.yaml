@@ -14,6 +14,7 @@ parameters:
     api.six.terminal: '17966309'
     api.geo.uri: 'http://ip-api.com/json'
     storage.img: '/var/www/html/storage/img'
+    storage.pdf: '/var/www/html/storage/pdf'
     app.supported_locales: ['fr', 'de', 'en']
     api.city.name: parentsolo
     api.city.key: so03232fa975a927abf4d5e48b2e17968981c1c221

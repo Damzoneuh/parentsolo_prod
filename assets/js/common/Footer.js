@@ -105,7 +105,7 @@ export default class Footer extends Component{
                                     </div>
                                     <div className="smaller ">
                                         <a href="/cgu">{links.cgu}</a>|
-                                        <a href="/contact">{links.press}</a>|
+                                        <a href="/press">{links.press}</a>|
                                         <a href="/contact">{links.add}</a>|
                                         <a href="/shop">{links.rate}</a>
                                         <div>© Parentsolo.ch - 2009 / 2020</div>

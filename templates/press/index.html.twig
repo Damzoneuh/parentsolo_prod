@@ -1,20 +1,22 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello PressController!{% endblock %}
-
+{% block title %}{{ parent() }} Press{% endblock %}
+{% block javascripts %}{{ parent() }}{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/html/parentsolo/src/Controller/PressController.php'|file_link(0) }}">src/Controller/PressController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/html/parentsolo/templates/press/index.html.twig'|file_link(0) }}">templates/press/index.html.twig</a></code></li>
-    </ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-center align-items-center">
+                <iframe width="560" height="315" src="{{ yt ~ '?start=2'}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+       {% for data in datas %}
+           <div class="col-12">
+               <div class="text-center pad-30 flex-column justify-content-center align-items-center">
+                   <div><img width="70%" src="{{ asset('/img/' ~ data ~ '.png') }}" alt="press"/></div>
+                   <div><a class="btn btn-group btn-primary" href="{{ path('press_pdf', {name: data}) }}">{{ btn }}</a></div>
+               </div>
+           </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
