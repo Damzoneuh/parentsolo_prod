@@ -27,9 +27,7 @@ class PressController extends AbstractController
             urlencode('LesQuotidiennes_2009'),
             urlencode('LesQuotidiennes_2010'),
             urlencode('LeTemps_2010'),
-            urlencode('SeMarier_2008'),
-            urlencode('TdG_2009'),
-            urlencode('TrendysLeMag_10mai2012')
+            urlencode('SeMarier_2008')
         ];
         $yt = $request->getLocale() == 'fr' ? 'https://www.youtube.com/embed/dZpvv-uxgmk' :
             'https://www.youtube.com/embed/FKopJSUGx4k';
@@ -38,7 +36,8 @@ class PressController extends AbstractController
         return $this->render('press/index.html.twig', [
             'datas' => $data,
             'yt' => $yt,
-            'btn' => $btn
+            'btn' => $btn,
+            'press' => $translator->trans('press', [], null, $request->getLocale())
         ]);
     }
 
@@ -48,6 +47,6 @@ class PressController extends AbstractController
      * @Route("/press/pdf/{name}", name="press_pdf")
      */
     public function renderPdf($name){
-        return $this->file($this->getParameter('storage.pdf') . '/' . $name);
+        return $this->file($this->getParameter('storage.pdf') . '/' . $name . '.pdf');
     }
 }
